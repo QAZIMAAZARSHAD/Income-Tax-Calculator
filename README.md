@@ -38,7 +38,7 @@ To watch application tutorial [**Download**](https://github.com/QAZIMAAZARSHAD/I
 
 ## Tech Stack
 
-<img src="https://i.postimg.cc/fWKwrRhL/download.png">
+<img src="https://i.postimg.cc/P59dyvXJ/download.png">
 
 ## Contribution Guidelines🏗
 
@@ -53,19 +53,19 @@ To start contributing, follow the below guidelines:
 **2.**  Clone your forked copy of the project.
 
 ```
-git clone --depth 1 https://github.com/<your_user_name>/Movie-Streaming-Website.git
+git clone --depth 1 https://github.com/<your_user_name>/Income-Tax-Calcultor.git
 ```
 
 **3.** Navigate to the project directory :file_folder: .
 
 ```
-cd Movie-Streaming-Website
+cd Income-Tax-Calcultor
 ```
 
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website.git 
+git remote add upstream https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor.git 
 ```
 
 **5.** Check the remotes for this repository.
@@ -114,7 +114,7 @@ git push -u origin <your_branch_name>
 
 **14.** Click on `Create Pull Request`.
 
-**15.** Voila :exclamation: You have made a PR to the Apna Theatre project :boom: . Sit back patiently and relax while the project maintainers review your PR. Please understand, at times the time taken to review a PR can vary from a few hours to a few days.
+**15.** Voila :exclamation: You have made a PR to the Income Tax Calculator project :boom: . Sit back patiently and relax while the project maintainers review your PR. Please understand, at times the time taken to review a PR can vary from a few hours to a few days.
 
 <p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=30%></p>
 
