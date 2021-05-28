@@ -136,5 +136,5 @@ git push -u origin <your_branch_name>
 <p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 
 ## License 
-<p align="center"><img width=35% src="https://media0.giphy.com/media/3ornjXbo3cjqh2BIyY/200.gif"></p>
+<p align="center"><img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
 
