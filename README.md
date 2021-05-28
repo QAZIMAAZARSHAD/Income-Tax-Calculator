@@ -1,12 +1,10 @@
 # Income Tax Calculator 💰
 
-<img align="center" alt="Coding" width="100%" height="300" src="https://i.postimg.cc/mrNbgMht/front.gif">
+Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
+<p align="center"><img src="https://media.giphy.com/media/ZdZimiZrt2nrVglWfD/giphy.gif" width = 40%></p>
 
-Are you a movie maniac, who loves to binge watch awesome series? If Yes, then you have come to right place.
-<p align="center"><img src="https://noelalanaleon.files.wordpress.com/2015/06/tyrion-29.gif" width = 40%></p>
-
-Everyone loves to watch their favorite shows with friends and some snacks. But there is something that you might be missing out on!
-<p align="center"><img src="https://i.pinimg.com/originals/43/c8/7e/43c87e08d3858256c4493e64b2c4c501.gif" width = 40%>></p>
+To know how much, you need to study our income tax rules and deal with a number of lengthy calculations.
+<p align="center"><img src="https://media3.giphy.com/media/tJeGZumxDB01q/giphy.gif?cid=790b7611701d5b27362a4698658b98f676aff698679490b7&rid=giphy.gif&ct=g" width = 40%>></p>
 
 So, what else do you need?🤔.
 <p align="center"><img src="https://media.tenor.com/images/1498a68342ec3e96a8773995f59dfc39/tenor.gif" width = 40%></p>
