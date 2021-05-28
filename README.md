@@ -34,7 +34,7 @@ An income tax calculation system for a salaried person. This is a GUI applicatio
 
 ## Application Walkthrough
 
-Complete Video Tutorial File in repo (Download to watch) -> **VIDEO--complete project tutorial.mp4**
+To watch application tutorial [**Download**](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/VIDEO--complete%20project%20tutorial.mp4?raw=true) video.
 
 ## Tech Stack
 
