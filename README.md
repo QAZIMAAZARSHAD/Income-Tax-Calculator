@@ -7,7 +7,7 @@ To know how much, you need to study our income tax rules and deal with a number 
 <p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 40%>></p>
 
 Well! Take a chill pill. Don't be intimidated by those lengthy calculations because Income Tax Calculator is here for the rescue!
-<p align="center"><img src="https://i.pinimg.com/originals/eb/39/9a/eb399a729c812376ca23c06df2d1e380.gif" width = 40%></p>
+<p align="center"><img src="https://media.tenor.com/images/8cb1eb67e6ed411122c572d2729b7c9e/tenor.gif" width = 30%></p>
 
 ## A sneek peek into what we have here🙈 :
 
@@ -133,7 +133,7 @@ git push -u origin <your_branch_name>
 </p>
 
 ## Code of Conduct
-<p align="center"><img width=35% src="https://media.giphy.com/media/qHRwTyhWIj4UU/200w_d.gif"></p>
+<p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 
 ## License 
 <p align="center"><img width=35% src="https://media0.giphy.com/media/3ornjXbo3cjqh2BIyY/200.gif"></p>
