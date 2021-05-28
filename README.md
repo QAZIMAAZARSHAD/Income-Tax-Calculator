@@ -23,10 +23,20 @@ Well! Take a chill pill. Don't be intimidated by those thoughts. __Apna Theatre 
 ## A sneek peek into what we have here🙈 :
 
 ### Home Page:
-<p align="center"><img src="https://i.postimg.cc/g0vsH5LC/Home-Page.jpg"></p>
 
-### Seperate Page for All Genres:
-<p align="center"><img src="https://i.postimg.cc/bYFxk8FG/Seperate.jpg"></p>
+![image](https://user-images.githubusercontent.com/56196640/119985316-1f154800-bfe0-11eb-9ce9-692e5222cb6d.png)
+
+### User Details:
+
+![image](https://user-images.githubusercontent.com/56196640/119985516-5f74c600-bfe0-11eb-9bc7-d09618319d14.png)
+
+### Check Tax Schemes:
+
+![image](https://user-images.githubusercontent.com/56196640/119985617-816e4880-bfe0-11eb-8434-ec6e542280d1.png)
+
+### Tax Calculation:
+
+![image](https://user-images.githubusercontent.com/56196640/119985690-9d71ea00-bfe0-11eb-8cf9-a71d44540f40.png)
 
 ## About
 
