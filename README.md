@@ -1,10 +1,10 @@
 # Income Tax Calculator 💰
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
-<p align="center"><img src="https://media.giphy.com/media/ZdZimiZrt2nrVglWfD/giphy.gif" width = 40%></p>
+<p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
 
 To know how much, you need to study our income tax rules and deal with a number of lengthy calculations.
-<p align="center"><img src="https://media3.giphy.com/media/tJeGZumxDB01q/giphy.gif?cid=790b7611701d5b27362a4698658b98f676aff698679490b7&rid=giphy.gif&ct=g" width = 40%>></p>
+<p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 40%>></p>
 
 So, what else do you need?🤔.
 <p align="center"><img src="https://media.tenor.com/images/1498a68342ec3e96a8773995f59dfc39/tenor.gif" width = 40%></p>
