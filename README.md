@@ -40,7 +40,7 @@ To watch application tutorial [**Download**](https://github.com/QAZIMAAZARSHAD/I
 
 <img src="https://i.postimg.cc/P59dyvXJ/download.png">
 
-## Contribution Guidelines🏗
+## Contribution Guidelines 🏗
 
 Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and improve it further
 
@@ -48,7 +48,7 @@ To start contributing, follow the below guidelines:
 
 **0.**  If you don't have git on your machine, [install](https://help.github.com/articles/set-up-git/) it.
 
-**1.**  Fork [this](https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website) repository.
+**1.**  Fork [this](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) repository.
 
 **2.**  Clone your forked copy of the project.
 
