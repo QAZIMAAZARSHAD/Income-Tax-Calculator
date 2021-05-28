@@ -6,7 +6,7 @@ Are you a movie maniac, who loves to binge watch awesome series? If Yes, then yo
 <p align="center"><img src="https://noelalanaleon.files.wordpress.com/2015/06/tyrion-29.gif" width = 40%></p>
 
 Everyone loves to watch their favorite shows with friends and some snacks. But there is something that you might be missing out on!
-<p align="center"><img src="https://i.pinimg.com/originals/43/c8/7e/43c87e08d3858256c4493e64b2c4c501.gif"></p>
+<p align="center"><img src="https://i.pinimg.com/originals/43/c8/7e/43c87e08d3858256c4493e64b2c4c501.gif" width = 40%>></p>
 
 So, what else do you need?🤔.
 <p align="center"><img src="https://media.tenor.com/images/1498a68342ec3e96a8773995f59dfc39/tenor.gif" width = 40%></p>
@@ -24,19 +24,19 @@ Well! Take a chill pill. Don't be intimidated by those thoughts. __Apna Theatre 
 
 ### Home Page:
 
-![image](https://user-images.githubusercontent.com/56196640/119985316-1f154800-bfe0-11eb-9ce9-692e5222cb6d.png)
+<p align="center"><img src="https://i.postimg.cc/wBzR2rT7/1.png" width = 64%></p>
 
 ### User Details:
 
-![image](https://user-images.githubusercontent.com/56196640/119985516-5f74c600-bfe0-11eb-9bc7-d09618319d14.png)
+<p align="center"><img src="https://i.postimg.cc/02r45WvM/2.png" width = 64%></p>
 
 ### Check Tax Schemes:
 
-![image](https://user-images.githubusercontent.com/56196640/119985617-816e4880-bfe0-11eb-8434-ec6e542280d1.png)
+<p align="center"><img src="https://i.postimg.cc/X7Z26rK9/3.png" width = 64%></p>
 
 ### Tax Calculation:
 
-![image](https://user-images.githubusercontent.com/56196640/119985690-9d71ea00-bfe0-11eb-8cf9-a71d44540f40.png)
+<p align="center"><img src="https://i.postimg.cc/qRbG9rzm/4.png" width = 64%></p>
 
 ## About
 
