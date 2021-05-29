@@ -39,7 +39,7 @@ To watch application tutorial [**Download**](https://github.com/QAZIMAAZARSHAD/I
 
 <img src="https://i.postimg.cc/P59dyvXJ/download.png">
 
-## ⭐ How to get started?
+## How to get started❓
 
 You can refer to the following articles on the basics of Git and Github and also contact the Project Mentors, in case you are stuck:
 
@@ -144,7 +144,7 @@ git push -u origin <your_branch_name>
 <a href="https://letsgrowmore.in/soc/" target="_black"><img src="https://i.postimg.cc/2jLPNC5V/download.jpg" width= "25%"/></a>
 </p>
 
-## Code of Conduct
+## Code of Conduct ✍️
 <p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 
 ## License 
