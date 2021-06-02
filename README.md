@@ -55,7 +55,9 @@ You can refer to the following articles on the basics of Git and Github and also
 
 Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and improve it further
 
-To start contributing, follow the below guidelines: 
+To start contributing, follow the below guidelines:
+
+🌟. Star🌟 the project to bookmark and appreciate the work.
 
 **0.**  Take a look at the existing [issues](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/issues) or create your own issues. Wait for the Issue to be assigned to you after which you can start working on it.
 
