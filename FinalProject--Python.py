@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.title("Income Tax calculator")
+root.title("Income Tax Calculator")
 root.geometry('1000x600')
 root.maxsize(1000, 600)
 font1 = ("Times", 14, "bold")
