@@ -249,7 +249,10 @@ Button(f3, text="Credits", command=credit, foreground='white', font=font1, width
 
 
 def end():
-    root.destroy()
+    mb = messagebox.askquestion('Exit Application', 'Are you sure you want to exit the application',
+                                       icon='warning')
+    if mb == 'yes':
+        root.destroy()
 
 
 Button(f3, text="Exit", command=end, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
