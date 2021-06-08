@@ -4,7 +4,7 @@ from tkinter import messagebox
 root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
-root.maxsize(1000, 600)
+root.resizable(False, False)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
@@ -64,6 +64,7 @@ def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
+    new_window.resizable(False, False)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
 
