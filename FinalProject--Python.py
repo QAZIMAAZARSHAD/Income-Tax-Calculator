@@ -94,7 +94,7 @@ l5.place(x=250, y=160)
 e5 = Entry(f3, width=50, border=2)
 e5.place(x=480, y=160)
 
-l6 = Label(f3, text='Exemptions / deductions', font=font1)
+l6 = Label(f3, text='Exemptions / Deductions', font=font1)
 l6.place(x=250, y=200)
 e6 = Entry(f3, width=50, border=2)
 e6.place(x=480, y=200)
@@ -185,13 +185,13 @@ def delete():
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
-
+    e6.delete(0, END)
+    e5.delete(0, END)
 
 delete()
 
 
 def calculate():
-    delete()
 
     at = e5.get()
     ad = e6.get()
@@ -201,11 +201,11 @@ def calculate():
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
-        better = "old tax"
+        better = "Old tax"
     elif ta <= 250000:
         better = "Income tax not applicable (Taxable income < 250000)"
     else:
-        better = "new tax"
+        better = "New tax"
 
     l7 = Label(f3, text='Old tax', font=font1)
     l7.place(x=250, y=300)
@@ -225,7 +225,7 @@ def calculate():
     l12 = Label(f3, text=str(tax_save), font=font1)
     l12.place(x=480, y=380)
 
-    l13 = Label(f3, text='better option', font=font1)
+    l13 = Label(f3, text='Better option', font=font1)
     l13.place(x=250, y=420)
 
     l14 = Label(f3, text=better, font=font1)
@@ -249,8 +249,7 @@ Button(f3, text="Credits", command=credit, foreground='white', font=font1, width
 
 
 def end():
-    mb = messagebox.askquestion('Exit Application', 'Are you sure you want to exit the application',
-                                       icon='warning')
+    mb = messagebox.askquestion('Exit Application', 'Are you sure you want to exit the application?', icon='warning')
     if mb == 'yes':
         root.destroy()
 
