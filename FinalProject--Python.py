@@ -186,12 +186,32 @@ def delete():
                 background="white")
     l14.place(x=480, y=420)
 
+    e5.delete(0,'end')
+    e6.delete(0,'end')
+
+
 
 delete()
 
 
 def calculate():
-    delete()
+    l8 = Label(f3, text="                                                                                         ",
+               font=font1,
+               background="white")
+    l8.place(x=480, y=300)
+    l10 = Label(f3, text="                                                                                        ",
+                font=font1,
+                background="white")
+    l10.place(x=480, y=340)
+    l12 = Label(f3, text="                                                                                        ",
+                font=font1,
+                background="white")
+    l12.place(x=480, y=380)
+    l14 = Label(f3, text="                                                                                        ",
+                font=font1,
+                background="white")
+    l14.place(x=480, y=420)
+
 
     at = e5.get()
     ad = e6.get()
