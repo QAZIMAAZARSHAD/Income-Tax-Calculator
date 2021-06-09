@@ -5,6 +5,7 @@ root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
 root.maxsize(1000, 600)
+root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
@@ -121,8 +122,8 @@ def oldtax(ta):
                 total = total + ta * 30 / 100
         elif n == 6:
             total = total + ta * 30 / 100
-        # else:
-            # total = 0
+        else:
+            total = 0
         ta = ta - 250000
         n = n + 1
     cess = total * 4 / 100
@@ -160,8 +161,8 @@ def newtax(ta):
                 total = total + ta * 25 / 100
         elif n == 6:
             total = total + ta * 30 / 100
-        # else:
-            # total = 0
+        else:
+            total = 0
         ta = ta - 250000
         n = n + 1
     cess = total * 4 / 100
@@ -195,9 +196,9 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
-    ta = float(at) - float(ad)
+    ta = int(at) - int(ad)
     old = oldtax(ta)
-    new = newtax(float(at))
+    new = newtax(int(at))
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
