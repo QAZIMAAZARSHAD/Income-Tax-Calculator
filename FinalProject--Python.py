@@ -185,13 +185,14 @@ def delete():
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
+    e5.delete(0, END)
+    e6.delete(0, END)
 
 
 delete()
 
 
 def calculate():
-    delete()
 
     at = e5.get()
     ad = e6.get()
