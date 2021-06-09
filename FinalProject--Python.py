@@ -250,8 +250,8 @@ Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', f
 
 
 def end():
-    mb = messagebox.askquestion('Exit Application', 'Are you sure you want to exit the application?', icon='warning')
-    if mb == 'yes':
+    mb = messagebox.askyesno('Exit Application', 'Are you sure you want to exit the application?')
+    if mb:
         root.destroy()
 
 
