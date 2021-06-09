@@ -195,9 +195,9 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
-    ta = int(at) - int(ad)
+    ta = float(at) - float(ad)
     old = oldtax(ta)
-    new = newtax(int(at))
+    new = newtax(float(at))
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
