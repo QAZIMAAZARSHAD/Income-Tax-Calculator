@@ -122,8 +122,8 @@ def oldtax(ta):
                 total = total + ta * 30 / 100
         elif n == 6:
             total = total + ta * 30 / 100
-        else:
-            total = 0
+#         else:
+#             total = 0
         ta = ta - 250000
         n = n + 1
     cess = total * 4 / 100
@@ -161,8 +161,8 @@ def newtax(ta):
                 total = total + ta * 25 / 100
         elif n == 6:
             total = total + ta * 30 / 100
-        else:
-            total = 0
+#         else:
+#             total = 0
         ta = ta - 250000
         n = n + 1
     cess = total * 4 / 100
@@ -196,9 +196,9 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
-    ta = int(at) - int(ad)
+    ta = float(at) - float(ad)
     old = oldtax(ta)
-    new = newtax(int(at))
+    new = newtax(float(at))
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
