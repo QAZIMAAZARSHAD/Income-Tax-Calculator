@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import tkinter.messagebox as mbox
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -8,10 +9,8 @@ root.maxsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
-
 def des_f1():
     f1.destroy()
-
 
 f1 = Frame(root, height=600, width=1000)
 f1.propagate(0)
@@ -22,10 +21,8 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
-                                                                                                                y=500)
-
-
+Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+                                                                                                                
 def des_f2():
     f2.destroy()
 
@@ -241,15 +238,17 @@ def credit():
                         'Special Thanks to Gagandeep Mam')
 
 
-Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,
-                                                                                                                  y=500)
-
+Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
-    root.destroy()
+    root.destroy() 
 
+def exit_win():
+    ans = mbox.askyesno('Exit', 'Are you sure?')
+    if (ans):
+        root.destroy()  
 
-Button(f3, text="Exit", command=end, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
-                                                                                                            y=500)
+Button(f3, text="Exit", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
+                                                                                                           
 
 root.mainloop()
