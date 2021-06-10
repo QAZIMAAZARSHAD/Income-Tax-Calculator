@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
+import tkinter.messagebox as mbox
 from tkmacosx import Button     # IF IT IS MAC THEN BUTTON LIBRARY FROM TKMACOSX MODULE IS IMPORTED
 import platform
-
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -12,10 +12,8 @@ root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
-
 def des_f1():
     f1.destroy()
-
 
 f1 = Frame(root, height=600, width=1000)
 f1.propagate(0)
@@ -29,10 +27,8 @@ c.create_image(0, 0, image=p1, anchor=NW)
 if platform.system() == "Darwin":   ### if its a Mac
     Button(f1, text="Start", font=font1, foreground='white',command=des_f1, bg='#8b1c13', width=100, border=4, highlightbackground = "#8b1c13", bd=0).place(x=450,y=500)
 else:
-    Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
-                                                                                                                y=500)
-
-
+    Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+                                                                                                                
 def des_f2():
     f2.destroy()
 
@@ -129,13 +125,9 @@ def oldtax(ta):
                 total = total + 250000 * 20 / 100
             else:
                 total = total + ta * 20 / 100
-        elif n == 4 or n == 5:
-            if ta >= 250000:
-                total = total + 250000 * 30 / 100
-            else:
-                total = total + ta * 30 / 100
-        elif n == 6:
+        elif n == 4 :
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
@@ -175,6 +167,7 @@ def newtax(ta):
                 total = total + ta * 25 / 100
         elif n == 6:
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
@@ -266,17 +259,20 @@ def credit():
 if platform.system() == "Darwin":   ### if its a Mac
     Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=100, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=630,y=500)
 else:
-    Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,
-                                                                                                                  y=500)
+    Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
     root.destroy() 
 
+def exit_win():
+    ans = mbox.askyesno('Exit', 'Are you sure?')
+    if (ans):
+        root.destroy()  
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f3, text="Exit", command=end, foreground='white', width=100, font=font1, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=800,y=500)
+    Button(f3, text="Exit", command=exit_win, foreground='white', width=100, font=font1, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=800,y=500)
 else:
-    Button(f3, text="Exit", command=end, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
-                                                                                                            y=500)
+    Button(f3, text="Exit", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
+                                                                                                           
 
 root.mainloop()
