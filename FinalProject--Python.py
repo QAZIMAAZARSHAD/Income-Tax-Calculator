@@ -1,5 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
+from string import  digits, ascii_letters
+import re
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -26,9 +28,40 @@ Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b
                                                                                                                 y=500)
 
 
-def des_f2():
-    f2.destroy()
+def check(email):
+    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    if(re.search(regex, email)):
+        return True
+    else:
+        return False
 
+def des_f2():
+    user_name = e1.get()
+    user_contact = e2.get()
+    user_email = e3.get()
+
+    invalid_charName_count = 0 
+    invalid_charContact_count = 0 
+    for char_n in user_name:
+        if char_n not in (ascii_letters + " "):
+            invalid_charName_count += 1
+    for char_c in user_contact:
+        if char_c not in digits:
+            invalid_charContact_count += 1
+    invalid_email_check = check(user_email)
+
+    # Validating Correct Inputs
+    if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
+        messagebox.showerror("Invalid Details","Please enter your Details.")
+    else :
+        if invalid_charName_count != 0:
+            messagebox.showerror("Invalid Name","You have used an illegal input, try again")   
+        elif invalid_charContact_count != 0 or len(user_contact) != 10:
+            messagebox.showerror("Invalid Number","Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
+        elif not invalid_email_check:
+            messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
+        else:
+            f2.destroy()
 
 f2 = Frame(root, height=600, width=1000, background='red')
 f2.propagate(0)
