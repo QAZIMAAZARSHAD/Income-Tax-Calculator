@@ -26,7 +26,7 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f1, text="Start", font=font1, foreground='white',command=des_f1, bg='#8b1c13', width=100, border=4).place(x=450,y=500)
+    Button(f1, text="Start", font=font1, foreground='white',command=des_f1, bg='#8b1c13', width=100, border=4, highlightbackground = "#8b1c13", bd=0).place(x=450,y=500)
 else:
     Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
                                                                                                                 y=500)
