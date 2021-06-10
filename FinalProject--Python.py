@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-from string import  digits, ascii_letters
 import re
 
 root = Tk()
@@ -28,37 +27,41 @@ Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b
                                                                                                                 y=500)
 
 
-def check(email):
+def check_email(email):
     regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
     if(re.search(regex, email)):
         return True
     else:
         return False
 
+def check_contact(number):
+    regex = '^[0-9]{10}$'
+    if(re.search(regex, number)):
+        return True
+    else:
+        return False
+
+def check_name(name):
+    if re.search('^[a-zA-z\s]+$', name):
+        return True
+    else:
+        return False
+    
+
 def des_f2():
     user_name = e1.get()
     user_contact = e2.get()
     user_email = e3.get()
-
-    invalid_charName_count = 0 
-    invalid_charContact_count = 0 
-    for char_n in user_name:
-        if char_n not in (ascii_letters + " "):
-            invalid_charName_count += 1
-    for char_c in user_contact:
-        if char_c not in digits:
-            invalid_charContact_count += 1
-    invalid_email_check = check(user_email)
-
+     
     # Validating Correct Inputs
     if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
         messagebox.showerror("Invalid Details","Please enter your Details.")
     else :
-        if invalid_charName_count != 0:
+        if not check_name(user_name):
             messagebox.showerror("Invalid Name","You have used an illegal input, try again")   
-        elif invalid_charContact_count != 0 or len(user_contact) != 10:
+        elif not check_contact(user_contact):
             messagebox.showerror("Invalid Number","Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
-        elif not invalid_email_check:
+        elif not check_email(user_email):
             messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
         else:
             f2.destroy()
