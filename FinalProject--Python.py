@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import re
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -25,10 +26,40 @@ c.create_image(0, 0, image=p1, anchor=NW)
 Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
                                                                                                                 y=500)
 
+def ValName(s1):
+    if re.search('^[a-zA-z\s]+$', s1):
+        return 1
+    else:
+        return 0
+
+def ValContact(s2):
+    vcontact = 0
+    if (re.search("[0-9]+", s2) and len(s2)==10):
+        vcontact = 1
+    return vcontact
+
+def ValEmail(s3):
+    chk = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    if(re.search(chk, s3)):
+        return 1
+    else:
+        return 0
 
 def des_f2():
-    f2.destroy()
-
+    valname = ValName(e1.get())
+    valcontact = ValContact(e2.get())
+    valemail = ValEmail(e3.get())
+    if (valname == 1 and valcontact == 1 and valemail == 1):
+        f2.destroy()
+    elif (valname != 1):
+        messagebox.showerror("Error", "Name must not be empty or contain any special character or digits.")
+        e1.delete(0, END)
+    elif (valcontact != 1):
+        messagebox.showerror("Error", "Contact Number must not be empty or have digits less than or more than 10 or have any type of special characters.")
+        e2.delete(0, END)
+    elif (valemail != 1):
+        messagebox.showerror("Error", "Please enter a valid email id.")
+        e3.delete(0, END)
 
 f2 = Frame(root, height=600, width=1000, background='red')
 f2.propagate(0)
@@ -57,8 +88,7 @@ l3.place(x=250, y=220)
 e3 = Entry(f2, width=50, border=2)
 e3.place(x=450, y=220)
 
-Button(f2, text="Next", command=des_f2, width=10, border=4).place(x=500, y=300)
-
+Button(f2, text="Next", command=des_f2, width=10, border=4).place(x=500, y = 300)
 
 def tax_scheme():
     new_window = Toplevel(f2)
