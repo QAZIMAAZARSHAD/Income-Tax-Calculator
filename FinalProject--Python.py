@@ -6,6 +6,7 @@ root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
 root.maxsize(1000, 600)
+root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
