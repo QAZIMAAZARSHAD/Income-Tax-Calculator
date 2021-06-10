@@ -114,13 +114,9 @@ def oldtax(ta):
                 total = total + 250000 * 20 / 100
             else:
                 total = total + ta * 20 / 100
-        elif n == 4 or n == 5:
-            if ta >= 250000:
-                total = total + 250000 * 30 / 100
-            else:
-                total = total + ta * 30 / 100
-        elif n == 6:
+        elif n == 4 :
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
@@ -160,6 +156,7 @@ def newtax(ta):
                 total = total + ta * 25 / 100
         elif n == 6:
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
