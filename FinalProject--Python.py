@@ -4,7 +4,7 @@ from tkinter import messagebox
 root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
-root.resizable(False, False)
+root.maxsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
@@ -64,7 +64,6 @@ def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
-    new_window.resizable(False, False)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
 
@@ -95,7 +94,7 @@ l5.place(x=250, y=160)
 e5 = Entry(f3, width=50, border=2)
 e5.place(x=480, y=160)
 
-l6 = Label(f3, text='Exemptions / Deductions', font=font1)
+l6 = Label(f3, text='Exemptions / deductions', font=font1)
 l6.place(x=250, y=200)
 e6 = Entry(f3, width=50, border=2)
 e6.place(x=480, y=200)
@@ -186,13 +185,13 @@ def delete():
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
-    e6.delete(0, END)
-    e5.delete(0, END)
+
 
 delete()
 
 
 def calculate():
+    delete()
 
     at = e5.get()
     ad = e6.get()
@@ -202,11 +201,11 @@ def calculate():
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
-        better = "Old tax"
+        better = "old tax"
     elif ta <= 250000:
         better = "Income tax not applicable (Taxable income < 250000)"
     else:
-        better = "New tax"
+        better = "new tax"
 
     l7 = Label(f3, text='Old tax', font=font1)
     l7.place(x=250, y=300)
@@ -226,7 +225,7 @@ def calculate():
     l12 = Label(f3, text=str(tax_save), font=font1)
     l12.place(x=480, y=380)
 
-    l13 = Label(f3, text='Better option', font=font1)
+    l13 = Label(f3, text='better option', font=font1)
     l13.place(x=250, y=420)
 
     l14 = Label(f3, text=better, font=font1)
@@ -250,12 +249,10 @@ Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', f
 
 
 def end():
-    mb = messagebox.askyesno('Exit Application', 'Are you sure you want to exit the application?')
-    if mb:
-        root.destroy()
+    root.destroy()
 
 
-Button(f3, text="Exit", command=end,  cursor="hand2", foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
+Button(f3, text="Exit", cursor="hand2", command=end, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
                                                                                                             y=500)
 
 root.mainloop()
