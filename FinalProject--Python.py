@@ -302,7 +302,7 @@ def end():
     root.destroy()
 
 
-def exit_win():
+def exit_win(): 
     ans = mbox.askyesno('Exit', 'Are you sure?')
     if (ans):
         root.destroy()
