@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
+import re
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -23,7 +24,7 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+
 def des_f2():
     f2.destroy()
 
@@ -219,52 +220,58 @@ def clear2():
 def calculate():
     delete()
 
-    at = e5.get()
-    ad = e6.get()
-    ta = int(at) - int(ad)
-    old = oldtax(ta)
-    new = newtax(int(at))
-    tax_save = abs(new - old)
-    tax_save = round(tax_save, 2)
-    if new > old:
-        better = "old tax"
-    elif ta <= 250000:
-        better = "Income tax not applicable (Taxable income < 250000)"
+    if re.search("^[0-9]+$", e5.get()) and re.search("^[0-9]+$", e6.get()):
+        at = e5.get()
+        ad = e6.get()
+        ta = int(at) - int(ad)
+        old = oldtax(ta)
+        new = newtax(int(at))
+        tax_save = abs(new - old)
+        tax_save = round(tax_save, 2)
+        if new > old:
+            better = "old tax"
+        elif ta <= 250000:
+            better = "Income tax not applicable (Taxable income < 250000)"
+        else:
+            better = "new tax"
+
+            if int(ad)>int(at):
+                old=0
+                new=0
+                tax_sav=0
+                better = "Deductions cannot be more than income"
+                det=" Enter the details correctly!!! "
+                er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+                er1.place(x=500, y=100)
+        l7 = Label(f3, text='Old tax', font=font1)
+        l7.place(x=250, y=300)
+
+        l8 = Label(f3, text=str(old), font=font1)
+        l8.place(x=480, y=300)
+
+        l9 = Label(f3, text='New tax', font=font1)
+        l9.place(x=250, y=340)
+
+        l10 = Label(f3, text=str(new), font=font1)
+        l10.place(x=480, y=340)
+
+        l11 = Label(f3, text='Tax saving', font=font1)
+        l11.place(x=250, y=380)
+
+        l12 = Label(f3, text=str(tax_save), font=font1)
+        l12.place(x=480, y=380)
+
+        l13 = Label(f3, text='better option', font=font1)
+        l13.place(x=250, y=420)
+
+        l14 = Label(f3, text=better, font=font1)
+        l14.place(x=480, y=420)
     else:
-        better = "new tax"
-
-    if int(ad)>int(at):
-        old=0
-        new=0
-        tax_sav=0
-        better = "Deductions cannot be more than income"
-        det=" Enter the details correctly!!! "
-        er1=Label(f3, text=det, font=font1, bg='white', fg='red')
-        er1.place(x=500, y=100)
-
-    l7 = Label(f3, text='Old tax', font=font1)
-    l7.place(x=250, y=300)
-
-    l8 = Label(f3, text=str(old), font=font1)
-    l8.place(x=480, y=300)
-
-    l9 = Label(f3, text='New tax', font=font1)
-    l9.place(x=250, y=340)
-
-    l10 = Label(f3, text=str(new), font=font1)
-    l10.place(x=480, y=340)
-
-    l11 = Label(f3, text='Tax saving', font=font1)
-    l11.place(x=250, y=380)
-
-    l12 = Label(f3, text=str(tax_save), font=font1)
-    l12.place(x=480, y=380)
-
-    l13 = Label(f3, text='better option', font=font1)
-    l13.place(x=250, y=420)
-
-    l14 = Label(f3, text=better, font=font1)
-    l14.place(x=480, y=420)
+        messagebox.showerror("Error", "Enter valid Annual Tax and Exemptions.")
+        e5.delete(0, END)
+        e5.insert(0, "")
+        e6.delete(0, END)
+        e6.insert(0, "")
 
 
 Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
@@ -284,14 +291,14 @@ Button(f3, text="User Details", cursor="hand2", command=details, foreground='whi
 Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
-    root.destroy() 
+    root.destroy()
 
 def exit_win():
     ans = mbox.askyesno('Exit', 'Are you sure?')
     if (ans):
-        root.destroy()  
+        root.destroy()
 
 Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
-                                                                                                           
+
 
 root.mainloop()
