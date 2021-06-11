@@ -6,13 +6,12 @@ root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
 root.maxsize(1000, 600)
+root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
-
 def des_f1():
     f1.destroy()
-
 
 f1 = Frame(root, height=600, width=1000)
 f1.propagate(0)
@@ -22,6 +21,7 @@ c = Canvas(f1, width=1000, height=600, bg="blue")
 c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
+
 
 Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
                                                                                                                 y=500)
@@ -44,6 +44,10 @@ def ValEmail(s3):
         return 1
     else:
         return 0
+
+
+Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+                                                                                                                
 
 def des_f2():
     valname = ValName(e1.get())
@@ -88,19 +92,35 @@ l3.place(x=250, y=220)
 e3 = Entry(f2, width=50, border=2)
 e3.place(x=450, y=220)
 
+
 Button(f2, text="Next", command=des_f2, width=10, border=4).place(x=500, y = 300)
+
+def clear1():
+    e1.delete(0, END)
+    e1.insert(0, "")
+    e2.delete(0, END)
+    e2.insert(0, "")
+    e3.delete(0, END)
+    e3.insert(0, "")
+
+Button(f2, text="Next", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
+Button(f2, text="Clear", cursor="hand2", command=clear1, width=10, border=4).place(x=600, y=300)
+
+
 
 def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
+    #Removing maximize/minimize option from "Check Tax Scheme" pop-up.
+    new_window.resizable(0,0)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
 
 logo = PhotoImage(file="image.gif")
 label = Label(f2, text="This is the main window")
 label.pack(pady=10)
-Button(f2, text="Check Taxes Scheme", command=tax_scheme).place(x=770, y=500)
+Button(f2, text="Check Taxes Scheme", cursor="hand2", command=tax_scheme).place(x=770, y=500)
 
 
 def des_f3():
@@ -144,13 +164,9 @@ def oldtax(ta):
                 total = total + 250000 * 20 / 100
             else:
                 total = total + ta * 20 / 100
-        elif n == 4 or n == 5:
-            if ta >= 250000:
-                total = total + 250000 * 30 / 100
-            else:
-                total = total + ta * 30 / 100
-        elif n == 6:
+        elif n == 4 :
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
@@ -190,6 +206,7 @@ def newtax(ta):
                 total = total + ta * 25 / 100
         elif n == 6:
             total = total + ta * 30 / 100
+            break
         else:
             total = 0
         ta = ta - 250000
@@ -221,6 +238,11 @@ def delete():
 
 delete()
 
+def clear2():
+    e5.delete(0, END)
+    e5.insert(0, "")
+    e6.delete(0, END)
+    e6.insert(0, "")
 
 def calculate():
 
@@ -263,8 +285,9 @@ def calculate():
     l14.place(x=480, y=420)
 
 
-Button(f3, text="Calculate", command=calculate, width=10, border=4).place(x=500, y=250)
-Button(f3, text="Reset", command=delete, width=10, border=4).place(x=610, y=250)
+Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
+Button(f3, text="Reset", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
+Button(f3, text="Clear", cursor="hand2", command=clear2, width=10, border=4).place(x=720, y=250)
 
 
 def credit():
@@ -275,15 +298,17 @@ def credit():
                         'Special Thanks to Gagandeep Mam')
 
 
-Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,
-                                                                                                                  y=500)
-
+Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
-    root.destroy()
+    root.destroy() 
 
+def exit_win():
+    ans = messagebox.askyesno('Exit', 'Are you sure?')
+    if (ans):
+        root.destroy()  
 
-Button(f3, text="Exit", command=end, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
-                                                                                                            y=500)
+Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
+                                                                                                           
 
 root.mainloop()
