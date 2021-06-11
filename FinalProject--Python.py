@@ -25,13 +25,12 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f1, text="Start", font=font1, foreground='white',command=des_f1, bg='#8b1c13', width=100, border=4, highlightbackground = "#8b1c13", bd=0).place(x=450,y=500)
+    Button(f1, text="Start", cursor="hand2", font=font1, foreground='white',command=des_f1, bg='#8b1c13', width=100, border=4, highlightbackground = "#8b1c13", bd=0).place(x=450,y=500)
 else:
-    Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+    Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+
 def des_f2():
     f2.destroy()
-
 
 f2 = Frame(root, height=600, width=1000, background='red')
 f2.propagate(0)
@@ -60,10 +59,11 @@ l3.place(x=250, y=220)
 e3 = Entry(f2, width=50, border=2)
 e3.place(x=450, y=220)
 
+
 if platform.system() == "Darwin":
-    Button(f2, text="Next", command=des_f2, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=500, y=300)
+    Button(f2, text="Next", cursor="hand2", command=des_f2, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=500, y=300)
 else:
-    Button(f2, text="Next", command=des_f2, width=10, border=4).place(x=500, y=300)
+    Button(f2, text="Next", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
 
 
 def tax_scheme():
@@ -79,9 +79,9 @@ logo = PhotoImage(file="image.gif")
 label = Label(f2, text="This is the main window")
 label.pack(pady=10)
 if platform.system() == "Darwin":
-    Button(f2, text="Check Taxes Scheme", command=tax_scheme).place(x=770, y=500)
+    Button(f2, text="Check Taxes Scheme", cursor="hand2", command=tax_scheme).place(x=770, y=500)
 else:
-    Button(f2, text="Check Taxes Scheme", command=tax_scheme).place(x=770, y=500)
+    Button(f2, text="Check Taxes Scheme", cursor="hand2", command=tax_scheme).place(x=770, y=500)
 
 
 def des_f3():
@@ -241,11 +241,11 @@ def calculate():
 
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f3, text="Calculate", command=calculate, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=500, y=250)
-    Button(f3, text="Reset", command=delete, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=610, y=250)
+    Button(f3, text="Calculate", cursor="hand2", command=calculate, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=500, y=250)
+    Button(f3, text="Reset", cursor="hand2", command=delete, width=100, border=4, highlightbackground = "white", highlightthickness = 1, bd=0).place(x=610, y=250)
 else:
-    Button(f3, text="Calculate", command=calculate, width=10, border=4).place(x=500, y=250)
-    Button(f3, text="Reset", command=delete, width=10, border=4).place(x=610, y=250)
+    Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
+    Button(f3, text="Reset", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
 
 
 def credit():
@@ -257,9 +257,9 @@ def credit():
 
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=100, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=630,y=500)
+    Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=100, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=630,y=500)
 else:
-    Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
+    Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
     root.destroy() 
@@ -270,9 +270,9 @@ def exit_win():
         root.destroy()  
 
 if platform.system() == "Darwin":   ### if its a Mac
-    Button(f3, text="Exit", command=exit_win, foreground='white', width=100, font=font1, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=800,y=500)
+    Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=100, font=font1, border=4, bg='#ad0414', highlightbackground = "#ad0414", highlightthickness = 1, bd=0).place(x=800,y=500)
 else:
-    Button(f3, text="Exit", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
+    Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
                                                                                                            
 
 root.mainloop()
