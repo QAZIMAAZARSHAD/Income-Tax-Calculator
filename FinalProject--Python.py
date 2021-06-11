@@ -23,7 +23,11 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+
+myname = StringVar(root)
+mycontact = StringVar(root)
+myemailid = StringVar(root)
+
 def des_f2():
     f2.destroy()
 
@@ -42,29 +46,20 @@ l0.place(x=250, y=100)
 
 l1 = Label(f2, text='Name', font=font1)
 l1.place(x=250, y=140)
-e1 = Entry(f2, width=50, border=2)
+e1 = Entry(f2, textvariable=myname, width=50, border=2)
 e1.place(x=450, y=140)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
-e2 = Entry(f2, width=50, border=2)
+e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
 e2.place(x=450, y=180)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
-e3 = Entry(f2, width=50, border=2)
+e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
 e3.place(x=450, y=220)
 
-def clear1():
-    e1.delete(0, END)
-    e1.insert(0, "")
-    e2.delete(0, END)
-    e2.insert(0, "")
-    e3.delete(0, END)
-    e3.insert(0, "")
-
 Button(f2, text="Next", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
-Button(f2, text="Clear", command=clear1, width=10, border=4).place(x=600, y=300)
 
 
 def tax_scheme():
@@ -85,6 +80,13 @@ Button(f2, text="Check Taxes Scheme", cursor="hand2", command=tax_scheme).place(
 def des_f3():
     f3.destroy()
 
+def details():
+    messagebox.showinfo('Details',
+                        'Name : ' + myname.get() + '\n\n'
+                                                   'Contact : ' + mycontact.get() + '\n\n'
+                                                                                    'Email Id : ' + myemailid.get() + '\n\n'
+                        )
+
 
 f3 = Frame(root, height=600, width=1000, background='yellow')
 f3.propagate(0)
@@ -94,6 +96,9 @@ c = Canvas(f3, width=1000, height=600, bg="blue")
 c.pack()
 p3 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p3, anchor=NW)
+
+Button(f3, text="User Details", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
+    x=450, y=500)
 
 l4 = Label(f3, text='Enter the required data (in INR) :-', font=font1)
 l4.place(x=250, y=100)
@@ -195,11 +200,6 @@ def delete():
 
 delete()
 
-def clear2():
-    e5.delete(0, END)
-    e5.insert(0, "")
-    e6.delete(0, END)
-    e6.insert(0, "")
 
 def calculate():
     delete()
@@ -245,7 +245,6 @@ def calculate():
 
 Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
 Button(f3, text="Reset", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
-Button(f3, text="Clear", command=clear2, width=10, border=4).place(x=720, y=250)
 
 
 def credit():
