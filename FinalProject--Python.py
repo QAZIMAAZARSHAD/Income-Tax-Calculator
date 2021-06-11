@@ -3,7 +3,6 @@ from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
 
-
 root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
@@ -11,6 +10,19 @@ root.maxsize(1000, 600)
 root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
+
+def des_f1():
+    f1.destroy()
+
+f1 = Frame(root, height=600, width=1000)
+f1.propagate(0)
+f1.pack(side='top')
+
+c = Canvas(f1, width=1000, height=600, bg="blue")
+c.pack()
+p1 = PhotoImage(file='front.gif')
+c.create_image(0, 0, image=p1, anchor=NW)
+Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)  
 
 def check_email(email):
     regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
@@ -25,14 +37,13 @@ def check_contact(number):
         return True
     else:
         return False
-
+                                                                                                    
 def check_name(name):
     if re.search('^[a-zA-z\s]+$', name):
         return True
     else:
         return False
     
-
 def des_f2():
     user_name = e1.get()
     user_contact = e2.get()
@@ -50,20 +61,6 @@ def des_f2():
             messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
         else:
             f2.destroy()
-
-f1 = Frame(root, height=600, width=1000)
-f1.propagate(0)
-f1.pack(side='top')
-
-c = Canvas(f1, width=1000, height=600, bg="blue")
-c.pack()
-p1 = PhotoImage(file='front.gif')
-c.create_image(0, 0, image=p1, anchor=NW)
-
-Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
-def des_f2():
-    f2.destroy()
 
 f2 = Frame(root, height=600, width=1000, background='red')
 f2.propagate(0)
