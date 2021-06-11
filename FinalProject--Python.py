@@ -211,33 +211,37 @@ def calculate():
         better = "new tax"
 
     if int(ad)>int(at):
+        old=0
+        new=0
+        tax_sav=0
+        better = "Deductions cannot be less than income"
         det=" Enter the details correctly!!! "
         er1=Label(f3, text=det, font=font1, bg='white', fg='red')
         er1.place(x=500, y=100)
-    else:
-        l7 = Label(f3, text='Old tax', font=font1)
-        l7.place(x=250, y=300)
 
-        l8 = Label(f3, text=str(old), font=font1)
-        l8.place(x=480, y=300)
+    l7 = Label(f3, text='Old tax', font=font1)
+    l7.place(x=250, y=300)
 
-        l9 = Label(f3, text='New tax', font=font1)
-        l9.place(x=250, y=340)
+    l8 = Label(f3, text=str(old), font=font1)
+    l8.place(x=480, y=300)
 
-        l10 = Label(f3, text=str(new), font=font1)
-        l10.place(x=480, y=340)
+    l9 = Label(f3, text='New tax', font=font1)
+    l9.place(x=250, y=340)
 
-        l11 = Label(f3, text='Tax saving', font=font1)
-        l11.place(x=250, y=380)
+    l10 = Label(f3, text=str(new), font=font1)
+    l10.place(x=480, y=340)
 
-        l12 = Label(f3, text=str(tax_save), font=font1)
-        l12.place(x=480, y=380)
+    l11 = Label(f3, text='Tax saving', font=font1)
+    l11.place(x=250, y=380)
 
-        l13 = Label(f3, text='better option', font=font1)
-        l13.place(x=250, y=420)
+    l12 = Label(f3, text=str(tax_save), font=font1)
+    l12.place(x=480, y=380)
 
-        l14 = Label(f3, text=better, font=font1)
-        l14.place(x=480, y=420)
+    l13 = Label(f3, text='better option', font=font1)
+    l13.place(x=250, y=420)
+
+    l14 = Label(f3, text=better, font=font1)
+    l14.place(x=480, y=420)
 
 
 
