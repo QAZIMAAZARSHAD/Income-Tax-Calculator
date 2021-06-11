@@ -269,7 +269,7 @@ def exit_win():
     if (ans):
         root.destroy()  
 
-Button(f3, text="Exit", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
+Button(f3, text="Exit",  command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
                                                                                                            
 
 root.mainloop()
