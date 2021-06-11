@@ -23,7 +23,7 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+
 def des_f2():
     f2.destroy()
 
@@ -182,6 +182,12 @@ def delete():
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
+    # destroying the below label
+    er1 = Label(f3, text="                                                                                        ",
+                font=font1,
+                background="white")
+    er1.place(x=500, y=100)
+
 
 
 delete()
@@ -204,29 +210,35 @@ def calculate():
     else:
         better = "new tax"
 
-    l7 = Label(f3, text='Old tax', font=font1)
-    l7.place(x=250, y=300)
+    if int(ad)>int(at):
+        det=" Enter the details correctly!!! "
+        er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+        er1.place(x=500, y=100)
+    else:
+        l7 = Label(f3, text='Old tax', font=font1)
+        l7.place(x=250, y=300)
 
-    l8 = Label(f3, text=str(old), font=font1)
-    l8.place(x=480, y=300)
+        l8 = Label(f3, text=str(old), font=font1)
+        l8.place(x=480, y=300)
 
-    l9 = Label(f3, text='New tax', font=font1)
-    l9.place(x=250, y=340)
+        l9 = Label(f3, text='New tax', font=font1)
+        l9.place(x=250, y=340)
 
-    l10 = Label(f3, text=str(new), font=font1)
-    l10.place(x=480, y=340)
+        l10 = Label(f3, text=str(new), font=font1)
+        l10.place(x=480, y=340)
 
-    l11 = Label(f3, text='Tax saving', font=font1)
-    l11.place(x=250, y=380)
+        l11 = Label(f3, text='Tax saving', font=font1)
+        l11.place(x=250, y=380)
 
-    l12 = Label(f3, text=str(tax_save), font=font1)
-    l12.place(x=480, y=380)
+        l12 = Label(f3, text=str(tax_save), font=font1)
+        l12.place(x=480, y=380)
 
-    l13 = Label(f3, text='better option', font=font1)
-    l13.place(x=250, y=420)
+        l13 = Label(f3, text='better option', font=font1)
+        l13.place(x=250, y=420)
 
-    l14 = Label(f3, text=better, font=font1)
-    l14.place(x=480, y=420)
+        l14 = Label(f3, text=better, font=font1)
+        l14.place(x=480, y=420)
+
 
 
 Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
@@ -251,7 +263,7 @@ def exit_win():
     if (ans):
         root.destroy()  
 
-Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
+Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)                                                                                                             
                                                                                                            
 
 root.mainloop()
