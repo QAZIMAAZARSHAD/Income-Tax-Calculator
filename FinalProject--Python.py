@@ -10,8 +10,10 @@ root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
+
 def des_f1():
     f1.destroy()
+
 
 f1 = Frame(root, height=600, width=1000)
 f1.propagate(0)
@@ -22,7 +24,18 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+Button(f1, text="Start", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,
+                                                                                                                y=500)
+
+myname = StringVar(root)
+mycontact = StringVar(root)
+myemailid = StringVar(root)
+
+
+def des_print():
+    print(myname.get())
+    print(mycontact.get())
+    print(myemailid.get())
 
 
 def des_f2():
@@ -43,18 +56,19 @@ l0.place(x=250, y=100)
 
 l1 = Label(f2, text='Name', font=font1)
 l1.place(x=250, y=140)
-e1 = Entry(f2, width=50, border=2)
+e1 = Entry(f2, textvariable=myname, width=50, border=2)
 e1.place(x=450, y=140)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
-e2 = Entry(f2, width=50, border=2)
+e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
 e2.place(x=450, y=180)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
-e3 = Entry(f2,  width=50, border=2)
+e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
 e3.place(x=450, y=220)
+
 
 def clear1():
     e1.delete(0, END)
@@ -64,6 +78,7 @@ def clear1():
     e3.delete(0, END)
     e3.insert(0, "")
 
+
 Button(f2, text="Next", command=des_f2, width=10, border=4).place(x=500, y=300)
 Button(f2, text="Clear", command=clear1, width=10, border=4).place(x=600, y=300)
 
@@ -72,8 +87,8 @@ def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
-    #Removing maximize/minimize option from "Check Tax Scheme" pop-up.
-    new_window.resizable(0,0)
+    # Removing maximize/minimize option from "Check Tax Scheme" pop-up.
+    new_window.resizable(0, 0)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
 
@@ -87,6 +102,13 @@ def des_f3():
     f3.destroy()
 
 
+def details():
+    messagebox.showinfo('Details',
+                        'Name : ' + myname.get() + '\n\n'
+                                                   'Contact : ' + mycontact.get() + '\n\n'
+                                                                                    'Email Id : ' + myemailid.get() + '\n\n'
+                        )
+
 
 f3 = Frame(root, height=600, width=1000, background='yellow')
 f3.propagate(0)
@@ -97,6 +119,17 @@ c.pack()
 p3 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p3, anchor=NW)
 
+# lname = Label(f3, text='Name : ' , font=font1)
+# lname.place(x=250, y=10)
+#
+# lcontact = Label(f3, text='Contact : ' + mycontact.get(), font=font1)
+# lcontact.place(x=250, y=30)
+#
+# lemailid = Label(f3, text='Email Id : ' + myemailid.get(), font=font1)
+# lemailid.place(x=250, y=50)
+
+Button(f3, text="User Details", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
+    x=500, y=500)
 
 l4 = Label(f3, text='Enter the required data (in INR) :-', font=font1)
 l4.place(x=250, y=100)
@@ -126,7 +159,7 @@ def oldtax(ta):
                 total = total + 250000 * 20 / 100
             else:
                 total = total + ta * 20 / 100
-        elif n == 4 :
+        elif n == 4:
             total = total + ta * 30 / 100
             break
         else:
@@ -198,11 +231,13 @@ def delete():
 
 delete()
 
+
 def clear2():
     e5.delete(0, END)
     e5.insert(0, "")
     e6.delete(0, END)
     e6.insert(0, "")
+
 
 def calculate():
     delete()
@@ -259,17 +294,21 @@ def credit():
                         'Special Thanks to Gagandeep Mam')
 
 
-Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
+Button(f3, text="Credits", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=660,
+                                                                                                                  y=500)
+
 
 def end():
-    root.destroy() 
+    root.destroy()
+
 
 def exit_win():
     ans = mbox.askyesno('Exit', 'Are you sure?')
     if (ans):
-        root.destroy()  
+        root.destroy()
 
-Button(f3, text="Exit",  command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
-                                                                                                           
+
+Button(f3, text="Exit", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,
+                                                                                                                 y=500)
 
 root.mainloop()
