@@ -15,17 +15,25 @@ Well! Take a chill pill. Don't be intimidated by those lengthy calculations beca
 
 <p align="center"><img src="https://i.postimg.cc/wBzR2rT7/1.png" width = 64%></p>
 
-### User Details:
+### Entered User Details:
 
-<p align="center"><img src="https://i.postimg.cc/02r45WvM/2.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/T2Dp5wHg/1.png" width = 64%></p>
 
 ### Check Tax Schemes:
 
-<p align="center"><img src="https://i.postimg.cc/X7Z26rK9/3.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/8cmGdqvQ/5.png" width = 64%></p>
+
+### Showing User Details:
+
+<p align="center"><img src="https://i.postimg.cc/mk8qgRMD/2.png" width = 64%></p>
 
 ### Tax Calculation:
 
-<p align="center"><img src="https://i.postimg.cc/qRbG9rzm/4.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/NGJpFdS5/3.png" width = 64%></p>
+
+### Showing Credits:
+
+<p align="center"><img src="https://i.postimg.cc/kXGYv0KQ/4.png" width = 64%></p>
 
 ## About
 
