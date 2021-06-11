@@ -265,7 +265,7 @@ def credit():
                         'Qazi Maaz Arshad\t\t11906424\t26 \n\n'
                         'Special Thanks to Gagandeep Mam')
 
-Button(f3, text="User Details", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
+Button(f3, text="User Details", cursor="hand2", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
     x=450, y=500)
 Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
