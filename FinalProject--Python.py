@@ -64,7 +64,7 @@ def clear1():
     e3.insert(0, "")
 
 Button(f2, text="Next", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
-Button(f2, text="Clear", command=clear1, width=10, border=4).place(x=600, y=300)
+Button(f2, text="Clear", cursor="hand2", command=clear1, width=10, border=4).place(x=600, y=300)
 
 
 def tax_scheme():
@@ -245,7 +245,7 @@ def calculate():
 
 Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
 Button(f3, text="Reset", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
-Button(f3, text="Clear", command=clear2, width=10, border=4).place(x=720, y=250)
+Button(f3, text="Clear", cursor="hand2", command=clear2, width=10, border=4).place(x=720, y=250)
 
 
 def credit():
