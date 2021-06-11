@@ -147,12 +147,14 @@ git push -u origin <your_branch_name>
 </p>
 
 ## Code of Conduct ✍️
-<p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/CODE_OF_CONDUCT.md">
+<img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 <h5 align="center"><b>Click to read</b></a> 
   
 ## License 
-<p align="center"><img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
+<img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
 <h5 align="center"><b>MIT License</b></a>   
 
