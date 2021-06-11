@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
+import re
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -23,9 +24,44 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+
+def check_email(email):
+    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    if(re.search(regex, email)):
+        return True
+    else:
+        return False
+
+def check_contact(number):
+    regex = '^[0-9]{10}$'
+    if(re.search(regex, number)):
+        return True
+    else:
+        return False
+
+def check_name(name):
+    if re.search('^[a-zA-z\s]+$', name):
+        return True
+    else:
+        return False
+                                                                                                                   
 def des_f2():
-    f2.destroy()
+    user_name = e1.get()
+    user_contact = e2.get()
+    user_email = e3.get()
+        
+    # Validating Correct Inputs
+    if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
+        messagebox.showerror("Invalid Details","Please enter your Details.")
+    else :
+        if not check_name(user_name):
+            messagebox.showerror("Invalid Name","You have used an illegal input, try again")   
+        elif not check_contact(user_contact):
+            messagebox.showerror("Invalid Number","Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
+        elif not check_email(user_email):
+            messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
+        else:
+            f2.destroy()
 
 myname = StringVar(root)
 mycontact = StringVar(root)
