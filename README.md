@@ -3,17 +3,14 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
 
-![GitHub contributors](https://img.shields.io/github/contributors-anon/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![](https://badgen.net/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/forks/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/open-issues/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/closed-issues/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/prs/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/open-prs/QAZIMAAZARSHAD/Income-Tax-Calcultor)
-![](https://badgen.net/github/closed-prs/QAZIMAAZARSHAD/Income-Tax-Calcultor)
 
-[![GitHub forks](https://img.shields.io/github/forks/QAZIMAAZARSHAD/Income-Tax-Calcultor.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/network)  [![GitHub stars](https://img.shields.io/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/stargazers/)  [![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
-
-
+[![GitHub stars](https://img.shields.io/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/network/members)
+[![GitHub Contributers](https://img.shields.io/github/contributors/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/issues)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-issues](https://img.shields.io/github/issues-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-prs](https://img.shields.io/github/issues-pr-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
 <p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
