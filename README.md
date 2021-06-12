@@ -1,5 +1,7 @@
 # Income Tax Calculator 💰
 
+
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
 <a href="https://app.slack.com/client/T022A4RL16V/C024AGHKNG4">
@@ -14,6 +16,7 @@
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
 [![GitHub closed-issues](https://img.shields.io/github/issues-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
 [![GitHub closed-prs](https://img.shields.io/github/issues-pr-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
 <p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
@@ -182,6 +185,17 @@ git push -u origin <your_branch_name>
 <h5 align="center"><b>MIT License</b></a></p>
 
 
+
+
+## ✨ Contributors
+
+<a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=QAZIMAAZARSHAD
+/Income-Tax-Calcultor" />
+</a>
+
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com) 
+
