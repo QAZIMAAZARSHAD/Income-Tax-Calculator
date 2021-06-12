@@ -1,4 +1,5 @@
 # Income Tax Calculator 💰
+![Athavani](https://socialify.git.ci/QAZIMAAZARSHAD/Income-Tax-Calcultor/image?description=1&forks=1&issues=1&language=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Dark)
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
 <p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
@@ -166,3 +167,32 @@ git push -u origin <your_branch_name>
 <img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
 <h5 align="center"><b>MIT License</b></a>   
 
+## ❤️ Project Admin
+<table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/QAZIMAAZARSHAD">
+            <img src="https://avatars.githubusercontent.com/u/56196640?v=4" width="200px;" alt="" style="border-radius:50%"/> <br />
+            <b>QAZIMAAZARSHAD
+/
+</b>
+            </a><br />
+            <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/commits?author=QAZIMAAZARSHAD" title="Coding">💻</a>
+        </td>
+ </tr>
+ </table>
+
+## ✨ Contributors
+
+<a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=QAZIMAAZARSHAD
+/Income-Tax-Calcultor" />
+</a>
+
+
+
+
+## 🔔 Credits
+
+<a href="https://github.com/Tejas1510"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="built by developers"></a>
+[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Tejas1510/Athavani)
