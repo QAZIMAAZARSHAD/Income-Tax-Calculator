@@ -25,8 +25,41 @@ c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
 
+def ValName(s1):
+    if re.search('^[a-zA-z\s]+$', s1):
+        return 1
+    else:
+        return 0
+
+def ValContact(s2):
+    vcontact = 0
+    if (re.search("[0-9]+", s2) and len(s2)==10):
+        vcontact = 1
+    return vcontact
+
+def ValEmail(s3):
+    chk = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    if(re.search(chk, s3)):
+        return 1
+    else:
+        return 0
+
 def des_f2():
-    f2.destroy()
+
+    valname = ValName(e1.get())
+    valcontact = ValContact(e2.get())
+    valemail = ValEmail(e3.get())
+    if (valname == 1 and valcontact == 1 and valemail == 1):
+        f2.destroy()
+    if (valname != 1):
+        messagebox.showerror("Error", "Name must not be empty or contain any special character or digits.")
+        e1.delete(0, END)
+    if (valcontact != 1):
+        messagebox.showerror("Error", "Contact Number must not be empty or have digits less than or more than 10 or have any type of special characters.")
+        e2.delete(0, END)
+    if (valemail != 1):
+        messagebox.showerror("Error", "Please enter a valid email id.")
+        e3.delete(0, END)
 
 myname = StringVar(root)
 mycontact = StringVar(root)
@@ -220,58 +253,52 @@ def clear2():
 def calculate():
     delete()
 
-    if re.search("^[0-9]+$", e5.get()) and re.search("^[0-9]+$", e6.get()):
-        at = e5.get()
-        ad = e6.get()
-        ta = int(at) - int(ad)
-        old = oldtax(ta)
-        new = newtax(int(at))
-        tax_save = abs(new - old)
-        tax_save = round(tax_save, 2)
-        if new > old:
-            better = "old tax"
-        elif ta <= 250000:
-            better = "Income tax not applicable (Taxable income < 250000)"
-        else:
-            better = "new tax"
-
-            if int(ad)>int(at):
-                old=0
-                new=0
-                tax_sav=0
-                better = "Deductions cannot be more than income"
-                det=" Enter the details correctly!!! "
-                er1=Label(f3, text=det, font=font1, bg='white', fg='red')
-                er1.place(x=500, y=100)
-        l7 = Label(f3, text='Old tax', font=font1)
-        l7.place(x=250, y=300)
-
-        l8 = Label(f3, text=str(old), font=font1)
-        l8.place(x=480, y=300)
-
-        l9 = Label(f3, text='New tax', font=font1)
-        l9.place(x=250, y=340)
-
-        l10 = Label(f3, text=str(new), font=font1)
-        l10.place(x=480, y=340)
-
-        l11 = Label(f3, text='Tax saving', font=font1)
-        l11.place(x=250, y=380)
-
-        l12 = Label(f3, text=str(tax_save), font=font1)
-        l12.place(x=480, y=380)
-
-        l13 = Label(f3, text='better option', font=font1)
-        l13.place(x=250, y=420)
-
-        l14 = Label(f3, text=better, font=font1)
-        l14.place(x=480, y=420)
+    at = e5.get()
+    ad = e6.get()
+    ta = int(at) - int(ad)
+    old = oldtax(ta)
+    new = newtax(int(at))
+    tax_save = abs(new - old)
+    tax_save = round(tax_save, 2)
+    if new > old:
+        better = "old tax"
+    elif ta <= 250000:
+        better = "Income tax not applicable (Taxable income < 250000)"
     else:
-        messagebox.showerror("Error", "Enter valid Annual Tax and Exemptions.")
-        e5.delete(0, END)
-        e5.insert(0, "")
-        e6.delete(0, END)
-        e6.insert(0, "")
+        better = "new tax"
+
+    if int(ad)>int(at):
+        old=0
+        new=0
+        tax_sav=0
+        better = "Deductions cannot be more than income"
+        det=" Enter the details correctly!!! "
+        er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+        er1.place(x=500, y=100)
+
+    l7 = Label(f3, text='Old tax', font=font1)
+    l7.place(x=250, y=300)
+
+    l8 = Label(f3, text=str(old), font=font1)
+    l8.place(x=480, y=300)
+
+    l9 = Label(f3, text='New tax', font=font1)
+    l9.place(x=250, y=340)
+
+    l10 = Label(f3, text=str(new), font=font1)
+    l10.place(x=480, y=340)
+
+    l11 = Label(f3, text='Tax saving', font=font1)
+    l11.place(x=250, y=380)
+
+    l12 = Label(f3, text=str(tax_save), font=font1)
+    l12.place(x=480, y=380)
+
+    l13 = Label(f3, text='better option', font=font1)
+    l13.place(x=250, y=420)
+
+    l14 = Label(f3, text=better, font=font1)
+    l14.place(x=480, y=420)
 
 
 Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
