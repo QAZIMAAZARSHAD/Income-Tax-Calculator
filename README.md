@@ -2,6 +2,9 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
+<a href="https://app.slack.com/client/T022A4RL16V/C024AGHKNG4">
+ <img src="https://img.shields.io/badge/Join community%20-Slack-4A154B.svg?&logo=slack" alt="Join Slack Community" />
+</a>
 
 
 [![GitHub stars](https://img.shields.io/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/stargazers)
