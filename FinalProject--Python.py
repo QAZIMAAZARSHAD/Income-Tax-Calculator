@@ -257,6 +257,7 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
+
     if (re.search("^[0-9]+$", at) and re.search("^[0-9]+$", ad)):
         ta = int(at) - int(ad)
         old = oldtax(ta)
