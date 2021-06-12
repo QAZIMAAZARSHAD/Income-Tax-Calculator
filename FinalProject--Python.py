@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
-import re
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -24,42 +23,9 @@ p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
 Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-
-def ValName(s1):
-    if re.search('^[a-zA-z\s]+$', s1):
-        return 1
-    else:
-        return 0
-
-def ValContact(s2):
-    vcontact = 0
-    if (re.search("[0-9]+", s2) and len(s2)==10):
-        vcontact = 1
-    return vcontact
-
-def ValEmail(s3):
-    chk = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
-    if(re.search(chk, s3)):
-        return 1
-    else:
-        return 0
-
+                                                                                                                
 def des_f2():
-
-    valname = ValName(e1.get())
-    valcontact = ValContact(e2.get())
-    valemail = ValEmail(e3.get())
-    if (valname == 1 and valcontact == 1 and valemail == 1):
-        f2.destroy()
-    if (valname != 1):
-        messagebox.showerror("Error", "Name must not be empty or contain any special character or digits.")
-        e1.delete(0, END)
-    if (valcontact != 1):
-        messagebox.showerror("Error", "Contact Number must not be empty or have digits less than or more than 10 or have any type of special characters.")
-        e2.delete(0, END)
-    if (valemail != 1):
-        messagebox.showerror("Error", "Please enter a valid email id.")
-        e3.delete(0, END)
+    f2.destroy()
 
 myname = StringVar(root)
 mycontact = StringVar(root)
@@ -318,14 +284,14 @@ Button(f3, text="User Details", cursor="hand2", command=details, foreground='whi
 Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
 
 def end():
-    root.destroy()
+    root.destroy() 
 
 def exit_win():
     ans = mbox.askyesno('Exit', 'Are you sure?')
     if (ans):
-        root.destroy()
+        root.destroy()  
 
 Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
-
+                                                                                                           
 
 root.mainloop()
