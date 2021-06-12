@@ -223,7 +223,7 @@ def calculate():
     ad = e6.get()
     ta = int(at) - int(ad)
     old = oldtax(ta)
-    new = newtax(int(at))
+    new = newtax(int(ta))
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
@@ -236,7 +236,7 @@ def calculate():
     if int(ad)>int(at):
         old=0
         new=0
-        tax_sav=0
+        tax_save=0.0
         better = "Deductions cannot be more than income"
         det=" Enter the details correctly!!! "
         er1=Label(f3, text=det, font=font1, bg='white', fg='red')
