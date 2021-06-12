@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
+import tkinter as tk
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -9,6 +10,20 @@ root.maxsize(1000, 600)
 root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
+
+class HoverButton(tk.Button):
+    def __init__(self, master, **kw):
+        tk.Button.__init__(self,master=master,**kw)
+        self.defaultBackground = self["background"]
+        self.bind("<Enter>", self.on_enter)
+        self.bind("<Leave>", self.on_leave)
+
+    def on_enter(self, e):
+        self['background'] = self['activebackground']
+        self['foreground']=self['activeforeground']
+
+    def on_leave(self, e):
+        self['background'] = self.defaultBackground
 
 def des_f1():
     f1.destroy()
@@ -22,8 +37,7 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-Button(f1, text="Start", cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
-                                                                                                                
+myButton=HoverButton(f1, activebackground="#105687",text="Start", cursor="hand2", font=font1, command=des_f1, bg='#8b1c13', width=8, border=2).place(x=450,y=500)
 def des_f2():
     f2.destroy()
 
@@ -55,7 +69,7 @@ l3.place(x=250, y=220)
 e3 = Entry(f2, width=50, border=2)
 e3.place(x=450, y=220)
 
-Button(f2, text="Next", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
+mybutton2=HoverButton(f2, activebackground="#105687", text="Next", cursor="hand2", command=des_f2, width=10, border=2).place(x=500, y=300)
 
 
 def tax_scheme():
@@ -70,7 +84,8 @@ def tax_scheme():
 logo = PhotoImage(file="image.gif")
 label = Label(f2, text="This is the main window")
 label.pack(pady=10)
-Button(f2, text="Check Taxes Scheme", cursor="hand2", command=tax_scheme).place(x=770, y=500)
+mybutton3=HoverButton(f2,  activebackground="#105687",text="Check Taxes Scheme",  cursor="hand2", command=tax_scheme).place(x=770, y=500)
+
 
 
 def des_f3():
@@ -229,8 +244,8 @@ def calculate():
     l14.place(x=480, y=420)
 
 
-Button(f3, text="Calculate", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
-Button(f3, text="Reset", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
+HoverButton(f3, text="Calculate", activebackground="#105687",cursor="hand2", command=calculate, width=10,border=2).place(x=500, y=250)
+HoverButton(f3, text="Reset",activebackground="#105687" ,cursor="hand2", command=delete, width=10,border=2 ).place(x=610, y=250)
 
 
 def credit():
@@ -241,7 +256,7 @@ def credit():
                         'Special Thanks to Gagandeep Mam')
 
 
-Button(f3, text="Credits", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
+HoverButton(f3, text="Credits",activebackground="#105687", cursor="hand2", command=credit, foreground='white', font=font1, width=8, bg='#ad0414',border=2).place(x=630,  y=500)
 
 def end():
     root.destroy() 
@@ -251,7 +266,7 @@ def exit_win():
     if (ans):
         root.destroy()  
 
-Button(f3, text="Exit", cursor="hand2", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
+HoverButton(f3, text="Exit", cursor="hand2",activebackground="#105687" ,command=exit_win, foreground='white', width=8, font=font1, border=3, bg='#ad0414' ).place(x=800,y=500)
                                                                                                            
 
 root.mainloop()
