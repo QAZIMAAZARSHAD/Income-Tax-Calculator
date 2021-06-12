@@ -180,12 +180,13 @@ git push -u origin <your_branch_name>
   </tr>
 </table>
 
-## Project Admin👨‍
-<table>
-  <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/qazi-maaz-arshad/"><img src="https://avatars.githubusercontent.com/u/56196640?v=4" height="120px" width="120px"/><br/><sub><b>Qazi Maaz Arshad👨‍</b></sub></a></td>
-  </tr>
-</table>
+## Project Admin👨‍:
+<p align="center">
+<img width=20% src="https://i.postimg.cc/qBmW9QyM/profile.gif">
+</p>
+
+<a href="https://www.linkedin.com/in/qazi-maaz-arshad/">
+<h5 align="center"><b>Qazi Maaz Arshad</b></a>
 
 
 ## Open Source Programs we have been associated with: 
