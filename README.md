@@ -194,5 +194,5 @@ git push -u origin <your_branch_name>
 
 ## 🔔 Credits
 
-<a href="https://github.com/Tejas1510"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="built by developers"></a>
-[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Tejas1510/Athavani)
+<a href="https://github.com/QAZIMAAZARSHAD"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="built by developers"></a>
+[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor)
