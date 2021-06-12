@@ -157,7 +157,7 @@ git push -u origin <your_branch_name>
 
 <p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=30%></p>
 
-## ✨Our valuable Contributors :
+## ✨Our Valuable Contributors :
 <table>
   <tr>
     <td align="center"><a href="https://github.com/QAZIMAAZARSHAD"><img src="https://avatars.githubusercontent.com/u/56196640?v=4" height="80px" width="80px"/><br/><sub><b>Qazi Maaz Arshad</b></sub></a></td>
