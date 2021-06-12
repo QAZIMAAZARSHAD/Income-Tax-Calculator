@@ -190,8 +190,7 @@ git push -u origin <your_branch_name>
 ## ✨ Contributors
 
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=QAZIMAAZARSHAD
-/Income-Tax-Calcultor" />
+  <img src="https://contrib.rocks/image?repo=QAZIMAAZARSHAD/Income-Tax-Calcultor" />
 </a>
 
 
