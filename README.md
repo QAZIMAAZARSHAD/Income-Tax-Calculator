@@ -1,5 +1,23 @@
 # Income Tax Calculator 💰
 
+
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
+<a href="https://app.slack.com/client/T022A4RL16V/C024AGHKNG4">
+ <img src="https://img.shields.io/badge/Join community%20-Slack-4A154B.svg?&logo=slack" alt="Join Slack Community" />
+</a>
+
+
+[![GitHub stars](https://img.shields.io/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/network/members)
+[![GitHub Contributers](https://img.shields.io/github/contributors/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/issues)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-issues](https://img.shields.io/github/issues-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-prs](https://img.shields.io/github/issues-pr-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+
+
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
 <p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
 
@@ -15,17 +33,25 @@ Well! Take a chill pill. Don't be intimidated by those lengthy calculations beca
 
 <p align="center"><img src="https://i.postimg.cc/wBzR2rT7/1.png" width = 64%></p>
 
-### User Details:
+### Entered User Details:
 
-<p align="center"><img src="https://i.postimg.cc/02r45WvM/2.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/T2Dp5wHg/1.png" width = 64%></p>
 
 ### Check Tax Schemes:
 
-<p align="center"><img src="https://i.postimg.cc/X7Z26rK9/3.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/8cmGdqvQ/5.png" width = 64%></p>
+
+### Showing User Details:
+
+<p align="center"><img src="https://i.postimg.cc/mk8qgRMD/2.png" width = 64%></p>
 
 ### Tax Calculation:
 
-<p align="center"><img src="https://i.postimg.cc/qRbG9rzm/4.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/NGJpFdS5/3.png" width = 64%></p>
+
+### Showing Credits:
+
+<p align="center"><img src="https://i.postimg.cc/kXGYv0KQ/4.png" width = 64%></p>
 
 ## About
 
@@ -147,12 +173,28 @@ git push -u origin <your_branch_name>
 </p>
 
 ## Code of Conduct ✍️
-<p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/CODE_OF_CONDUCT.md">
+<img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 <h5 align="center"><b>Click to read</b></a> 
   
 ## License 
-<p align="center"><img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
-<h5 align="center"><b>MIT License</b></a>   
+<img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
+<h5 align="center"><b>MIT License</b></a></p>
+
+
+
+
+## ✨ Contributors
+
+<a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=QAZIMAAZARSHAD/Income-Tax-Calcultor" />
+</a>
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com) 
 
