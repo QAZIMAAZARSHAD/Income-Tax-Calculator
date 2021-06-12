@@ -280,7 +280,6 @@ def calculate():
             er1=Label(f3, text=det, font=font1, bg='white', fg='red')
             er1.place(x=500, y=100)
 
-
         l7 = Label(f3, text='Old tax', font=font1)
         l7.place(x=250, y=300)
 
