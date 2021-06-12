@@ -257,6 +257,7 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
+    
     if (re.search("^[0-9]+$", at) and re.search("^[0-9]+$", ad)):
         ta = int(at) - int(ad)
         old = oldtax(ta)
@@ -278,6 +279,7 @@ def calculate():
             det=" Enter the details correctly!!! "
             er1=Label(f3, text=det, font=font1, bg='white', fg='red')
             er1.place(x=500, y=100)
+
 
         l7 = Label(f3, text='Old tax', font=font1)
         l7.place(x=250, y=300)
@@ -305,7 +307,7 @@ def calculate():
 
     elif (len(at) == 0 or len(ad) == 0):
         messagebox.showerror("No Input", "Please enter a valid input in Annual Tax and Exemptions.")
-        
+
     else:
         messagebox.showerror("Invalid Input", "Annual Tax and Exemptions must be numbers.")
 
