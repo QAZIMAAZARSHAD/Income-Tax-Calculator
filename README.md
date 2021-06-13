@@ -157,29 +157,6 @@ git push -u origin <your_branch_name>
 
 <p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=30%></p>
 
-## ✨Our Valuable Contributors :
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/QAZIMAAZARSHAD"><img src="https://avatars.githubusercontent.com/u/56196640?v=4" height="80px" width="80px"/><br/><sub><b>Qazi Maaz Arshad</b></sub></a></td>
-   <td align="center"><a href="https://github.com/techabhi08"><img src="https://avatars.githubusercontent.com/u/75834097?v=4" height="80px" width="80px"/><br/><sub><b>techabhi</b></sub></a></td>
-   <td align="center"><a href="https://github.com/jigar-sable"><img src="https://avatars.githubusercontent.com/u/64949957?v=4" height="80px" width="80px"/><br/><sub><b>Jigar Sable</b></sub></a></td>
-   <td align="center"><a href="https://github.com/SanjeevKumar22"><img src="https://avatars.githubusercontent.com/u/74849833?v=4" height="80px" width="80px"/><br/><sub><b>Sanjeev Kumar</b></sub></a></td>
-   <td align="center"><a href="https://github.com/Prateek027-S"><img src="https://avatars.githubusercontent.com/u/55046164?v=4" height="80px" width="80px"/><br/><sub><b>Prateek Shah</b></sub></a></td>
-   <td align="center"><a href="https://github.com/akash435"><img src="https://avatars.githubusercontent.com/u/57003737?v=4" height="80px" width="80px"/><br/><sub><b>Akash Rajak</b></sub></a></td>
- </tr>
- <tr>
-   <td align="center"><a href="https://github.com/Khushi-sharma07"><img src="https://avatars.githubusercontent.com/u/77405013?v=4" height="80px" width="80px"/><br/><sub><b>Khushi Sharma</b></sub></a></td>
-   <td align="center"><a href="https://github.com/ShreyaKanodia"><img src="https://avatars.githubusercontent.com/u/85160858?v=4" height="80px" width="80px"/><br/><sub><b>Shreya Kanodia</b></sub></a></td>
-   <td align="center"><a href="https://github.com/skimran2000"><img src="https://avatars.githubusercontent.com/u/78163908?v=4" height="80px" width="80px"/><br/><sub><b>Shaik Imranuddin</b></sub></a></td>
-   <td align="center"><a href="https://github.com/Umesh-01"><img src="https://avatars.githubusercontent.com/u/83420185?v=4" height="80px" width="80px"/><br/><sub><b>Umesh Singh</b></sub></a></td>
-    <td align="center"><a href="https://github.com/hellosafwaan"><img src="https://avatars.githubusercontent.com/u/83726810?v=4" height="80px" width="80px"/><br/><sub><b>Safwaan</b></sub></a></td>
-   
-<!--    Uncomment the below code and add as per your profile to add section of contributors in readme -->
-<!--    <td align="center"><a href="https://github.com/jhondoe"><img src="https://avatars.githubusercontent.com/u/44448888?v=4" height="120px" width="120px"/><br/><sub><b>Jhon Doe</b></sub></a></td> -->
-   
-  </tr>
-</table>
-
 ## Project Admin👨‍:
 <p align="center">
 <img width=20% src="https://i.postimg.cc/qBmW9QyM/profile.gif">
@@ -206,7 +183,29 @@ git push -u origin <your_branch_name>
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
 <img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
 <h5 align="center"><b>MIT License</b></a></p>
-
+ 
+ ## ✨Our Valuable Contributors :
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/QAZIMAAZARSHAD"><img src="https://avatars.githubusercontent.com/u/56196640?v=4" height="80px" width="80px"/><br/><sub><b>Qazi Maaz Arshad</b></sub></a></td>
+   <td align="center"><a href="https://github.com/techabhi08"><img src="https://avatars.githubusercontent.com/u/75834097?v=4" height="80px" width="80px"/><br/><sub><b>techabhi</b></sub></a></td>
+   <td align="center"><a href="https://github.com/jigar-sable"><img src="https://avatars.githubusercontent.com/u/64949957?v=4" height="80px" width="80px"/><br/><sub><b>Jigar Sable</b></sub></a></td>
+   <td align="center"><a href="https://github.com/SanjeevKumar22"><img src="https://avatars.githubusercontent.com/u/74849833?v=4" height="80px" width="80px"/><br/><sub><b>Sanjeev Kumar</b></sub></a></td>
+   <td align="center"><a href="https://github.com/Prateek027-S"><img src="https://avatars.githubusercontent.com/u/55046164?v=4" height="80px" width="80px"/><br/><sub><b>Prateek Shah</b></sub></a></td>
+   <td align="center"><a href="https://github.com/akash435"><img src="https://avatars.githubusercontent.com/u/57003737?v=4" height="80px" width="80px"/><br/><sub><b>Akash Rajak</b></sub></a></td>
+ </tr>
+ <tr>
+   <td align="center"><a href="https://github.com/Khushi-sharma07"><img src="https://avatars.githubusercontent.com/u/77405013?v=4" height="80px" width="80px"/><br/><sub><b>Khushi Sharma</b></sub></a></td>
+   <td align="center"><a href="https://github.com/ShreyaKanodia"><img src="https://avatars.githubusercontent.com/u/85160858?v=4" height="80px" width="80px"/><br/><sub><b>Shreya Kanodia</b></sub></a></td>
+   <td align="center"><a href="https://github.com/skimran2000"><img src="https://avatars.githubusercontent.com/u/78163908?v=4" height="80px" width="80px"/><br/><sub><b>Shaik Imranuddin</b></sub></a></td>
+   <td align="center"><a href="https://github.com/Umesh-01"><img src="https://avatars.githubusercontent.com/u/83420185?v=4" height="80px" width="80px"/><br/><sub><b>Umesh Singh</b></sub></a></td>
+    <td align="center"><a href="https://github.com/hellosafwaan"><img src="https://avatars.githubusercontent.com/u/83726810?v=4" height="80px" width="80px"/><br/><sub><b>Safwaan</b></sub></a></td>
+   
+<!--    Uncomment the below code and add as per your profile to add section of contributors in readme -->
+<!--    <td align="center"><a href="https://github.com/jhondoe"><img src="https://avatars.githubusercontent.com/u/44448888?v=4" height="120px" width="120px"/><br/><sub><b>Jhon Doe</b></sub></a></td> -->
+   
+  </tr>
+</table>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
