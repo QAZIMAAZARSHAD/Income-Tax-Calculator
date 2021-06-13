@@ -3,6 +3,7 @@ from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
 import tkinter as tk
+import smtplib
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -266,13 +267,18 @@ def clear2():
     e5.insert(0, "")
     e6.delete(0, END)
     e6.insert(0, "")
-
+old = 0
+new = 0
+tax_save = 0
 def calculate():
     delete()
 
     at = e5.get()
     ad = e6.get()
     ta = int(at) - int(ad)
+    global old
+    global new
+    global tax_save
     old = oldtax(ta)
     new = newtax(int(ta))
     tax_save = abs(new - old)
@@ -321,7 +327,19 @@ def calculate():
 HoverButton(f3, text="Calculate",activebackground="#6382b8", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
 HoverButton(f3, text="Reset",activebackground="#6382b8", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
 HoverButton(f3, text="Clear",activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(x=720, y=250)
-
+def send_message():
+    sender_email="Ram98765Soni@gmail.com"
+    sender_pass="R@S98765@"
+    to=myemailid.get()
+    subject=" Tax calculation summary "
+    email_body_info=f" Hello {myname.get()} \n Your tax calculation summary is: \n Old Tax: {old} \n New Tax: {new} \n Tax Save: {tax_save} "
+    finalMessage='Subject: {}\n\n{} '.format(subject,email_body_info)
+    server=smtplib.SMTP("smtp.gmail.com",587)
+    server.starttls()
+    server.login(sender_email,sender_pass)
+    print("login successfull")
+    server.sendmail(sender_email,to,finalMessage)
+    print("message sent")
 
 def credit():
     messagebox.showinfo('Credits',
@@ -329,11 +347,16 @@ def credit():
                         'Rocky Sharaf\t\t11918040\t70\n\n'
                         'Qazi Maaz Arshad\t\t11906424\t26 \n\n'
                         'Special Thanks to Gagandeep Mam')
+def mail():
+    a=messagebox.showinfo(" User's Tax Info",f"Name: {myname.get()}\n\n Old Tax: {old}  New Tax: {new}  Tax Save: {tax_save}")
+    if a == "ok":
+        send_message()
+
 
 HoverButton(f3, text="User Details",activebackground="#6382b8", cursor="hand2", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
     x=450, y=500)
 HoverButton(f3, text="Credits",activebackground="#6382b8", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
-
+Button(f3,text="Share with mail",cursor="hand2",command=mail,foreground='white', font=font1, width=15, border=4, bg='#ad0414').place(x=200,y=500)
 def end():
     root.destroy() 
 
