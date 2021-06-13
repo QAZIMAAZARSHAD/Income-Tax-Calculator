@@ -1,5 +1,23 @@
 # Income Tax Calculator 💰
 
+
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
+<a href="https://app.slack.com/client/T022A4RL16V/C024AGHKNG4">
+ <img src="https://img.shields.io/badge/Join community%20-Slack-4A154B.svg?&logo=slack" alt="Join Slack Community" />
+</a>
+
+
+[![GitHub stars](https://img.shields.io/github/stars/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/network/members)
+[![GitHub Contributers](https://img.shields.io/github/contributors/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/issues)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-issues](https://img.shields.io/github/issues-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+[![GitHub closed-prs](https://img.shields.io/github/issues-pr-closed-raw/QAZIMAAZARSHAD/Income-Tax-Calcultor)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/pulls)
+
+
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
 <p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
 
@@ -15,17 +33,25 @@ Well! Take a chill pill. Don't be intimidated by those lengthy calculations beca
 
 <p align="center"><img src="https://i.postimg.cc/wBzR2rT7/1.png" width = 64%></p>
 
-### User Details:
+### Entered User Details:
 
-<p align="center"><img src="https://i.postimg.cc/02r45WvM/2.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/T2Dp5wHg/1.png" width = 64%></p>
 
 ### Check Tax Schemes:
 
-<p align="center"><img src="https://i.postimg.cc/X7Z26rK9/3.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/8cmGdqvQ/5.png" width = 64%></p>
+
+### Showing User Details:
+
+<p align="center"><img src="https://i.postimg.cc/mk8qgRMD/2.png" width = 64%></p>
 
 ### Tax Calculation:
 
-<p align="center"><img src="https://i.postimg.cc/qRbG9rzm/4.png" width = 64%></p>
+<p align="center"><img src="https://i.postimg.cc/NGJpFdS5/3.png" width = 64%></p>
+
+### Showing Credits:
+
+<p align="center"><img src="https://i.postimg.cc/kXGYv0KQ/4.png" width = 64%></p>
 
 ## About
 
@@ -132,13 +158,13 @@ git push -u origin <your_branch_name>
 <p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=30%></p>
 
 ## Project Admin👨‍:
-
 <p align="center">
 <img width=20% src="https://i.postimg.cc/qBmW9QyM/profile.gif">
 </p>
 
 <a href="https://www.linkedin.com/in/qazi-maaz-arshad/">
 <h5 align="center"><b>Qazi Maaz Arshad</b></a>
+
 
 ## Open Source Programs we have been associated with: 
 
@@ -147,12 +173,40 @@ git push -u origin <your_branch_name>
 </p>
 
 ## Code of Conduct ✍️
-<p align="center"><img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/CODE_OF_CONDUCT.md">
+<img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 <h5 align="center"><b>Click to read</b></a> 
   
-## License 
-<p align="center"><img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif"></p>
+## 📝 License 
+<p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
-<h5 align="center"><b>MIT License</b></a>   
+<img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
+<h5 align="center"><b>MIT License</b></a></p>
+ 
+ ## ✨Our Valuable Contributors :
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/QAZIMAAZARSHAD"><img src="https://avatars.githubusercontent.com/u/56196640?v=4" height="80px" width="80px"/><br/><sub><b>Qazi Maaz Arshad</b></sub></a></td>
+   <td align="center"><a href="https://github.com/techabhi08"><img src="https://avatars.githubusercontent.com/u/75834097?v=4" height="80px" width="80px"/><br/><sub><b>techabhi</b></sub></a></td>
+   <td align="center"><a href="https://github.com/jigar-sable"><img src="https://avatars.githubusercontent.com/u/64949957?v=4" height="80px" width="80px"/><br/><sub><b>Jigar Sable</b></sub></a></td>
+   <td align="center"><a href="https://github.com/SanjeevKumar22"><img src="https://avatars.githubusercontent.com/u/74849833?v=4" height="80px" width="80px"/><br/><sub><b>Sanjeev Kumar</b></sub></a></td>
+   <td align="center"><a href="https://github.com/Prateek027-S"><img src="https://avatars.githubusercontent.com/u/55046164?v=4" height="80px" width="80px"/><br/><sub><b>Prateek Shah</b></sub></a></td>
+   <td align="center"><a href="https://github.com/akash435"><img src="https://avatars.githubusercontent.com/u/57003737?v=4" height="80px" width="80px"/><br/><sub><b>Akash Rajak</b></sub></a></td>
+ </tr>
+ <tr>
+   <td align="center"><a href="https://github.com/Khushi-sharma07"><img src="https://avatars.githubusercontent.com/u/77405013?v=4" height="80px" width="80px"/><br/><sub><b>Khushi Sharma</b></sub></a></td>
+   <td align="center"><a href="https://github.com/ShreyaKanodia"><img src="https://avatars.githubusercontent.com/u/85160858?v=4" height="80px" width="80px"/><br/><sub><b>Shreya Kanodia</b></sub></a></td>
+   <td align="center"><a href="https://github.com/skimran2000"><img src="https://avatars.githubusercontent.com/u/78163908?v=4" height="80px" width="80px"/><br/><sub><b>Shaik Imranuddin</b></sub></a></td>
+   <td align="center"><a href="https://github.com/Umesh-01"><img src="https://avatars.githubusercontent.com/u/83420185?v=4" height="80px" width="80px"/><br/><sub><b>Umesh Singh</b></sub></a></td>
+    <td align="center"><a href="https://github.com/hellosafwaan"><img src="https://avatars.githubusercontent.com/u/83726810?v=4" height="80px" width="80px"/><br/><sub><b>Safwaan</b></sub></a></td>
+   
+<!--    Uncomment the below code and add as per your profile to add section of contributors in readme -->
+<!--    <td align="center"><a href="https://github.com/jhondoe"><img src="https://avatars.githubusercontent.com/u/44448888?v=4" height="120px" width="120px"/><br/><sub><b>Jhon Doe</b></sub></a></td> -->
+   
+  </tr>
+</table>
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com) 

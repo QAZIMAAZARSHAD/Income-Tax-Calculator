@@ -1,7 +1,11 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
+
 import tkinter as tk
+
+import re
+
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -37,10 +41,51 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-myButton=HoverButton(f1, activebackground="#105687",text="Start", cursor="hand2", font=font1, command=des_f1, bg='#8b1c13', width=8, border=2).place(x=450,y=500)
-def des_f2():
-    f2.destroy()
 
+myButton=HoverButton(f1, activebackground="#105687",text="Start", cursor="hand2", font=font1, command=des_f1, bg='#8b1c13', width=8, border=2).place(x=450,y=500)
+
+def check_email(email):
+    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
+    if(re.search(regex, email)):
+        return True
+    else:
+        return False
+
+def check_contact(number):
+    regex = '^[0-9]{10}$'
+    if(re.search(regex, number)):
+        return True
+    else:
+        return False
+
+def check_name(name):
+    if re.search('^[a-zA-z\s]+$', name):
+        return True
+    else:
+        return False
+                                                                                                                        
+
+def des_f2():
+    user_name = e1.get()
+    user_contact = e2.get()
+    user_email = e3.get()
+     
+    # Validating Correct Inputs
+    if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
+        messagebox.showerror("Invalid Details","Please enter your Details.")
+    else :
+        if not check_name(user_name):
+            messagebox.showerror("Invalid Name","You have used an illegal input, try again")   
+        elif not check_contact(user_contact):
+            messagebox.showerror("Invalid Number","Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
+        elif not check_email(user_email):
+            messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
+        else:
+            f2.destroy()
+
+myname = StringVar(root)
+mycontact = StringVar(root)
+myemailid = StringVar(root)
 
 f2 = Frame(root, height=600, width=1000, background='red')
 f2.propagate(0)
@@ -56,20 +101,32 @@ l0.place(x=250, y=100)
 
 l1 = Label(f2, text='Name', font=font1)
 l1.place(x=250, y=140)
-e1 = Entry(f2, width=50, border=2)
+e1 = Entry(f2, textvariable=myname,width=50, border=2)
 e1.place(x=450, y=140)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
-e2 = Entry(f2, width=50, border=2)
+e2 = Entry(f2, textvariable=mycontact,width=50, border=2)
 e2.place(x=450, y=180)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
-e3 = Entry(f2, width=50, border=2)
+e3 = Entry(f2, textvariable=myemailid,width=50, border=2)
 e3.place(x=450, y=220)
 
+
 mybutton2=HoverButton(f2, activebackground="#105687", text="Next", cursor="hand2", command=des_f2, width=10, border=2).place(x=500, y=300)
+def clear1():
+    e1.delete(0, END)
+    e1.insert(0, "")
+    e2.delete(0, END)
+    e2.insert(0, "")
+    e3.delete(0, END)
+    e3.insert(0, "")
+
+
+HoverButton(f2, text="Clear", cursor="hand2",activebackground="#105687", command=clear1, width=10, border=4).place(x=600, y=300)
+
 
 
 def tax_scheme():
@@ -90,6 +147,13 @@ mybutton3=HoverButton(f2,  activebackground="#105687",text="Check Taxes Scheme",
 
 def des_f3():
     f3.destroy()
+
+def details():
+    messagebox.showinfo('Details',
+                        'Name : ' + myname.get() + '\n\n'
+                                                   'Contact : ' + mycontact.get() + '\n\n'
+                                                                                    'Email Id : ' + myemailid.get() + '\n\n'
+                        )
 
 
 f3 = Frame(root, height=600, width=1000, background='yellow')
@@ -197,10 +261,20 @@ def delete():
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
+    # destroying the below label
+    er1 = Label(f3, text="                                                                                        ",
+                font=font1,
+                background="white")
+    er1.place(x=500, y=100)
 
 
 delete()
 
+def clear2():
+    e5.delete(0, END)
+    e5.insert(0, "")
+    e6.delete(0, END)
+    e6.insert(0, "")
 
 def calculate():
     delete()
@@ -209,7 +283,7 @@ def calculate():
     ad = e6.get()
     ta = int(at) - int(ad)
     old = oldtax(ta)
-    new = newtax(int(at))
+    new = newtax(int(ta))
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
@@ -218,6 +292,15 @@ def calculate():
         better = "Income tax not applicable (Taxable income < 250000)"
     else:
         better = "new tax"
+
+    if int(ad)>int(at):
+        old=0
+        new=0
+        tax_save=0.0
+        better = "Deductions cannot be more than income"
+        det=" Enter the details correctly!!! "
+        er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+        er1.place(x=500, y=100)
 
     l7 = Label(f3, text='Old tax', font=font1)
     l7.place(x=250, y=300)
@@ -248,6 +331,7 @@ HoverButton(f3, text="Calculate", activebackground="#105687",cursor="hand2", com
 HoverButton(f3, text="Reset",activebackground="#105687" ,cursor="hand2", command=delete, width=10,border=2 ).place(x=610, y=250)
 
 
+
 def credit():
     messagebox.showinfo('Credits',
                         'Name\t\t\tReg. number\tRoll no.\n\nMohit Kumar Mahato\t11913514\t09\n\n'
@@ -256,7 +340,11 @@ def credit():
                         'Special Thanks to Gagandeep Mam')
 
 
+
 HoverButton(f3, text="Credits",activebackground="#105687", cursor="hand2", command=credit, foreground='white', font=font1, width=8, bg='#ad0414',border=2).place(x=630,  y=500)
+
+HoverButton(f3, text="User Details",activebackground="#105687", cursor="hand2", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
+    x=450, y=500)
 
 def end():
     root.destroy() 
