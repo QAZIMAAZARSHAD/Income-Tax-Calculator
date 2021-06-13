@@ -12,22 +12,25 @@ root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
+
 class HoverButton(tk.Button):
     def __init__(self, master, **kw):
-        tk.Button.__init__(self,master=master,**kw)
+        tk.Button.__init__(self, master=master, **kw)
         self.defaultBackground = self["background"]
         self.bind("<Enter>", self.on_enter)
         self.bind("<Leave>", self.on_leave)
 
     def on_enter(self, e):
         self['background'] = self['activebackground']
-        self['foreground']=self['activeforeground']
+        self['foreground'] = self['activeforeground']
 
     def on_leave(self, e):
         self['background'] = self.defaultBackground
 
+
 def des_f1():
     f1.destroy()
+
 
 f1 = Frame(root, height=600, width=1000)
 f1.propagate(0)
@@ -38,45 +41,52 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-HoverButton(f1, text="Start", activebackground="#6382b8",cursor="hand2", font=font1, foreground='white', command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450,y=500)
+HoverButton(f1, text="Start", activebackground="#6382b8", cursor="hand2", font=font1, foreground='white',
+            command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450, y=500)
+
 
 def check_email(email):
     regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
-    if(re.search(regex, email)):
+    if (re.search(regex, email)):
         return True
     else:
         return False
 
+
 def check_contact(number):
     regex = '^[0-9]{10}$'
-    if(re.search(regex, number)):
+    if (re.search(regex, number)):
         return True
     else:
         return False
+
 
 def check_name(name):
     if re.search('^[a-zA-z\s]+$', name):
         return True
     else:
         return False
-                                                                                                                        
+
+
 def des_f2():
     user_name = e1.get()
     user_contact = e2.get()
     user_email = e3.get()
-     
+
     # Validating Correct Inputs
     if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
-        messagebox.showerror("Invalid Details","Please enter your Details.")
-    else :
+        messagebox.showerror("Invalid Details", "Please enter your Details.")
+    else:
         if not check_name(user_name):
-            messagebox.showerror("Invalid Name","You have used an illegal input, try again")   
+            messagebox.showerror("Invalid Name", "You have used an illegal input, try again")
         elif not check_contact(user_contact):
-            messagebox.showerror("Invalid Number","Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
+            messagebox.showerror("Invalid Number",
+                                 "Please enter only numbers that are 10 digits long and shouldnt contain any other charecters")
         elif not check_email(user_email):
-            messagebox.showerror ("Invalid Email ID", "Please enter correct Email ID")
+            messagebox.showerror("Invalid Email ID", "Please enter correct Email ID")
         else:
             f2.destroy()
+
 
 myname = StringVar(root)
 mycontact = StringVar(root)
@@ -96,18 +106,19 @@ l0.place(x=250, y=100)
 
 l1 = Label(f2, text='Name', font=font1)
 l1.place(x=250, y=140)
-e1 = Entry(f2, textvariable=myname,width=50, border=2)
+e1 = Entry(f2, textvariable=myname, width=50, border=2)
 e1.place(x=450, y=140)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
-e2 = Entry(f2, textvariable=mycontact,width=50, border=2)
+e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
 e2.place(x=450, y=180)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
-e3 = Entry(f2, textvariable=myemailid,width=50, border=2)
+e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
 e3.place(x=450, y=220)
+
 
 def clear1():
     e1.delete(0, END)
@@ -117,27 +128,32 @@ def clear1():
     e3.delete(0, END)
     e3.insert(0, "")
 
-HoverButton(f2, text="Next",activebackground="#6382b8", cursor="hand2", command=des_f2, width=10, border=4).place(x=500, y=300)
-HoverButton(f2, text="Clear",activebackground="#6382b8", cursor="hand2", command=clear1, width=10, border=4).place(x=600, y=300)
+
+HoverButton(f2, text="Next", activebackground="#6382b8", cursor="hand2", command=des_f2, width=10, border=4).place(
+    x=500, y=300)
+HoverButton(f2, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear1, width=10, border=4).place(
+    x=600, y=300)
 
 
 def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
-    #Removing maximize/minimize option from "Check Tax Scheme" pop-up.
-    new_window.resizable(0,0)
+    # Removing maximize/minimize option from "Check Tax Scheme" pop-up.
+    new_window.resizable(0, 0)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
 
 logo = PhotoImage(file="image.gif")
 label = Label(f2, text="This is the main window")
 label.pack(pady=10)
-HoverButton(f2, text="Check Taxes Scheme",activebackground="#6382b8", cursor="hand2", command=tax_scheme).place(x=770, y=500)
+HoverButton(f2, text="Check Taxes Scheme", activebackground="#6382b8", cursor="hand2", command=tax_scheme).place(x=770,
+                                                                                                                 y=500)
 
 
 def des_f3():
     f3.destroy()
+
 
 def details():
     messagebox.showinfo('Details',
@@ -184,7 +200,7 @@ def oldtax(ta):
                 total = total + 250000 * 20 / 100
             else:
                 total = total + ta * 20 / 100
-        elif n == 4 :
+        elif n == 4:
             total = total + ta * 30 / 100
             break
         else:
@@ -261,11 +277,13 @@ def delete():
 
 delete()
 
+
 def clear2():
     e5.delete(0, END)
     e5.insert(0, "")
     e6.delete(0, END)
     e6.insert(0, "")
+
 
 def calculate():
     delete()
@@ -284,13 +302,13 @@ def calculate():
     else:
         better = "new tax"
 
-    if int(ad)>int(at):
-        old=0
-        new=0
-        tax_save=0.0
+    if int(ad) > int(at):
+        old = 0
+        new = 0
+        tax_save = 0.0
         better = "Deductions cannot be more than income"
-        det=" Enter the details correctly!!! "
-        er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+        det = " Enter the details correctly!!! "
+        er1 = Label(f3, text=det, font=font1, bg='white', fg='red')
         er1.place(x=500, y=100)
 
     l7 = Label(f3, text='Old tax', font=font1)
@@ -318,9 +336,12 @@ def calculate():
     l14.place(x=480, y=420)
 
 
-HoverButton(f3, text="Calculate",activebackground="#6382b8", cursor="hand2", command=calculate, width=10, border=4).place(x=500, y=250)
-HoverButton(f3, text="Reset",activebackground="#6382b8", cursor="hand2", command=delete, width=10, border=4).place(x=610, y=250)
-HoverButton(f3, text="Clear",activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(x=720, y=250)
+HoverButton(f3, text="Calculate", activebackground="#6382b8", cursor="hand2", command=calculate, width=10,
+            border=4).place(x=500, y=250)
+HoverButton(f3, text="Reset", activebackground="#6382b8", cursor="hand2", command=delete, width=10, border=4).place(
+    x=610, y=250)
+HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(
+    x=720, y=250)
 
 
 def credit():
@@ -330,19 +351,40 @@ def credit():
                         'Qazi Maaz Arshad\t\t11906424\t26 \n\n'
                         'Special Thanks to Gagandeep Mam')
 
-HoverButton(f3, text="User Details",activebackground="#6382b8", cursor="hand2", command=details, foreground='white', font=font1, width=10, border=4, bg='#ad0414').place(
+
+def learn_more():
+    with open("learnMoreReadme.txt") as f:
+        # reading file
+        readme = f.read()
+
+        # Display whole message
+        messagebox.showinfo(title="Title",
+                            message=str(readme))
+
+
+HoverButton(f3, text="Learn More", activebackground="#6382b8", cursor="hand2", command=learn_more,
+            foreground='white',
+            font=font1, width=10, border=4, bg='#ad0414').place(
+    x=280, y=500)
+
+HoverButton(f3, text="User Details", activebackground="#6382b8", cursor="hand2", command=details, foreground='white',
+            font=font1, width=10, border=4, bg='#ad0414').place(
     x=450, y=500)
-HoverButton(f3, text="Credits",activebackground="#6382b8", cursor="hand2", command=credit, foreground='white', font=font1, width=8, border=4, bg='#ad0414').place(x=630,  y=500)
+HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
+            font=font1, width=8, border=4, bg='#ad0414').place(x=630, y=500)
+
 
 def end():
-    root.destroy() 
+    root.destroy()
+
 
 def exit_win():
     ans = mbox.askyesno('Exit', 'Are you sure?')
     if (ans):
-        root.destroy()  
+        root.destroy()
 
-HoverButton(f3, text="Exit", cursor="hand2",activebackground="#6382b8", command=exit_win, foreground='white', width=8, font=font1, border=4, bg='#ad0414').place(x=800,y=500)
-                                                                                                           
+
+HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command=exit_win, foreground='white', width=8,
+            font=font1, border=4, bg='#ad0414').place(x=800, y=500)
 
 root.mainloop()
