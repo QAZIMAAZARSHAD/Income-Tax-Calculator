@@ -256,7 +256,7 @@ def delete():
     er1 = Label(f3, text="                                                                                        ",
                 font=font1,
                 background="white")
-    er1.place(x=500, y=100)
+    er1.place(x=600, y=100)
 
 
 delete()
