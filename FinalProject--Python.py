@@ -346,7 +346,11 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
-    ta = int(at) - int(ad)
+    try:
+        ta = int(at) - int(ad)
+    except:
+        messagebox.showerror("Invalid Input", "Please enter valid Annual Tax and/or Exemption.")
+        return 0
     old = oldtax(ta)
     new = newtax(int(ta))
     tax_save = abs(new - old)
