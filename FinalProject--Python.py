@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-import tkinter.messagebox as mbox
 import re
 import tkinter as tk
 
@@ -28,26 +27,26 @@ class HoverButton(tk.Button):
         self['background'] = self.defaultBackground
 
 
-def des_f1():
-    f1.destroy()
+def destroy_frame1():
+    frame1.destroy()
 
 
-f1 = Frame(root, height=600, width=1000)
-f1.propagate(0)
-f1.pack(side='top')
+frame1 = Frame(root, height=600, width=1000)
+frame1.propagate(0)
+frame1.pack(side='top')
 
-c = Canvas(f1, width=1000, height=600, bg="blue")
-c.pack()
+canva = Canvas(frame1, width=1000, height=600, bg="blue")
+canva.pack()
 p1 = PhotoImage(file='front.gif')
-c.create_image(0, 0, image=p1, anchor=NW)
+canva.create_image(0, 0, image=p1, anchor=NW)
 
-HoverButton(f1, text="Start", activebackground="#6382b8", cursor="hand2", font=font1, foreground='white',
-            command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450, y=500)
+HoverButton(frame1, text="Start", activebackground="#6382b8", cursor="hand2", font=font1, foreground='white',
+            command=destroy_frame1, bg='#8b1c13', width=8, border=4).place(x=450, y=500)
 
 
 def check_email(email):
     regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
-    if (re.search(regex, email)):
+    if re.search(regex, email):
         return True
     else:
         return False
@@ -55,7 +54,7 @@ def check_email(email):
 
 def check_contact(number):
     regex = '^[0-9]{10}$'
-    if (re.search(regex, number)):
+    if re.search(regex, number):
         return True
     else:
         return False
@@ -68,10 +67,10 @@ def check_name(name):
         return False
 
 
-def des_f2():
-    user_name = e1.get()
-    user_contact = e2.get()
-    user_email = e3.get()
+def destroy_frame2():
+    user_name = entity1.get()
+    user_contact = entity2.get()
+    user_email = entity3.get()
 
     # Validating Correct Inputs
     if len(user_name) == 0 or len(user_contact) == 0 or len(user_email) == 0:
@@ -85,92 +84,101 @@ def des_f2():
         elif not check_email(user_email):
             messagebox.showerror("Invalid Email ID", "Please enter correct Email ID")
         else:
-            f2.destroy()
+            frame2.destroy()
 
 
-myname = StringVar(root)
-mycontact = StringVar(root)
-myemailid = StringVar(root)
+my_name = StringVar(root)
+my_contact = StringVar(root)
+my_emailId = StringVar(root)
 
-firstclick1 = True
+first_click_1 = True
+
+
 def on_e1_click(event):
     """function that gets called whenever entry1 is clicked"""
-    global firstclick1
+    global first_click_1
 
-    if firstclick1: # if this is the first time they clicked it
-        firstclick1 = False
-        e1.delete(0, "end") # delete all the text in the entry
+    if first_click_1:  # if this is the first time they clicked it
+        first_click_1 = False
+        entity1.delete(0, "end")  # delete all the text in the entry
 
-firstclick2 = True
+
+first_click_2 = True
+
+
 def on_e2_click(event):
     """function that gets called whenever entry1 is clicked"""
-    global firstclick2
+    global first_click_2
 
-    if firstclick2: # if this is the first time they clicked it
-        firstclick2 = False
-        e2.delete(0, "end") # delete all the text in the entry
+    if first_click_2:  # if this is the first time they clicked it
+        first_click_2 = False
+        entity2.delete(0, "end")  # delete all the text in the entry
 
-firstclick3 = True
+
+first_click_3 = True
+
+
 def on_e3_click(event):
     """function that gets called whenever entry1 is clicked"""
-    global firstclick3
+    global first_click_3
 
-    if firstclick3: # if this is the first time they clicked it
-        firstclick3 = False
-        e3.delete(0, "end") # delete all the text in the entry
+    if first_click_3:  # if this is the first time they clicked it
+        first_click_3 = False
+        entity3.delete(0, "end")  # delete all the text in the entry
 
 
-f2 = Frame(root, height=600, width=1000, background='red')
-f2.propagate(0)
-f2.pack(side='top')
+frame2 = Frame(root, height=600, width=1000, background='red')
+frame2.propagate(0)
+frame2.pack(side='top')
 
-c = Canvas(f2, width=1000, height=600, bg="blue")
-c.pack()
+canva = Canvas(frame2, width=1000, height=600, bg="blue")
+canva.pack()
 p2 = PhotoImage(file='back.gif')
-c.create_image(0, 0, image=p2, anchor=NW)
+canva.create_image(0, 0, image=p2, anchor=NW)
 
-l0 = Label(f2, text='Enter your details :-', font=font1)
-l0.place(x=250, y=100)
+label0 = Label(frame2, text='Enter your details :-', font=font1)
+label0.place(x=250, y=100)
 
-l1 = Label(f2, text='Name', font=font1)
-l1.place(x=250, y=140)
-e1 = Entry(f2, textvariable=myname, width=50, border=2)
-e1.insert(0, 'Enter Your Name...')
-e1.bind('<FocusIn>', on_e1_click)
-e1.place(x=450, y=140)
+label1 = Label(frame2, text='Name', font=font1)
+label1.place(x=250, y=140)
+entity1 = Entry(frame2, textvariable=my_name, width=50, border=2)
+entity1.insert(0, 'Enter Your Name...')
+entity1.bind('<FocusIn>', on_e1_click)
+entity1.place(x=450, y=140)
 
-l2 = Label(f2, text='Contact', font=font1)
-l2.place(x=250, y=180)
-e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
-e2.insert(0, 'Enter Your Contact...')
-e2.bind('<FocusIn>', on_e2_click)
-e2.place(x=450, y=180)
+label2 = Label(frame2, text='Contact', font=font1)
+label2.place(x=250, y=180)
+entity2 = Entry(frame2, textvariable=my_contact, width=50, border=2)
+entity2.insert(0, 'Enter Your Contact...')
+entity2.bind('<FocusIn>', on_e2_click)
+entity2.place(x=450, y=180)
 
-l3 = Label(f2, text='Email Id', font=font1)
-l3.place(x=250, y=220)
-e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
-e3.insert(0, 'Enter Your Email Id...')
-e3.bind('<FocusIn>', on_e3_click)
-e3.place(x=450, y=220)
+label3 = Label(frame2, text='Email Id', font=font1)
+label3.place(x=250, y=220)
+entity3 = Entry(frame2, textvariable=my_emailId, width=50, border=2)
+entity3.insert(0, 'Enter Your Email Id...')
+entity3.bind('<FocusIn>', on_e3_click)
+entity3.place(x=450, y=220)
 
 
 def clear1():
-    e1.delete(0, END)
-    e1.insert(0, "")
-    e2.delete(0, END)
-    e2.insert(0, "")
-    e3.delete(0, END)
-    e3.insert(0, "")
+    entity1.delete(0, END)
+    entity1.insert(0, "")
+    entity2.delete(0, END)
+    entity2.insert(0, "")
+    entity3.delete(0, END)
+    entity3.insert(0, "")
 
 
-HoverButton(f2, text="Next", activebackground="#6382b8", cursor="hand2", command=des_f2, width=10, border=4).place(
+HoverButton(frame2, text="Next", activebackground="#6382b8", cursor="hand2", command=destroy_frame2, width=10,
+            border=4).place(
     x=500, y=300)
-HoverButton(f2, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear1, width=10, border=4).place(
+HoverButton(frame2, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear1, width=10, border=4).place(
     x=600, y=300)
 
 
 def tax_scheme():
-    new_window = Toplevel(f2)
+    new_window = Toplevel(frame2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
     # Removing maximize/minimize option from "Check Tax Scheme" pop-up.
@@ -179,153 +187,159 @@ def tax_scheme():
 
 
 logo = PhotoImage(file="image.gif")
-label = Label(f2, text="This is the main window")
+label = Label(frame2, text="This is the main window")
 label.pack(pady=10)
-HoverButton(f2, text="Check Taxes Scheme", activebackground="#6382b8", cursor="hand2", command=tax_scheme).place(x=770,
-                                                                                                                 y=500)
+HoverButton(frame2, text="Check Taxes Scheme", activebackground="#6382b8", cursor="hand2", command=tax_scheme).place(x=770,
+                                                                                                                     y=500)
 
 
-def des_f3():
-    f3.destroy()
+def destroy_frame3():
+    frame3.destroy()
 
 
 def details():
     messagebox.showinfo('Details',
-                        'Name : ' + myname.get() + '\n\n'
-                                                   'Contact : ' + mycontact.get() + '\n\n'
-                                                                                    'Email Id : ' + myemailid.get() + '\n\n'
+                        'Name : ' + my_name.get() + '\n\n'
+                                                    'Contact : ' + my_contact.get() + '\n\n'
+                                                                                      'Email Id : ' + my_emailId.get() + '\n\n'
                         )
 
+
 firstclick5 = True
+
+
 def on_e5_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick5
 
-    if firstclick5: # if this is the first time they clicked it
+    if firstclick5:  # if this is the first time they clicked it
         firstclick5 = False
-        e5.delete(0, "end") # delete all the text in the entry
+        entity5.delete(0, "end")  # delete all the text in the entry
+
 
 firstclick6 = True
+
+
 def on_e6_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick6
 
-    if firstclick6: # if this is the first time they clicked it
+    if firstclick6:  # if this is the first time they clicked it
         firstclick6 = False
-        e6.delete(0, "end") # delete all the text in the entry
+        entity6.delete(0, "end")  # delete all the text in the entry
 
 
-f3 = Frame(root, height=600, width=1000, background='yellow')
-f3.propagate(0)
-f3.pack(side='top')
+frame3 = Frame(root, height=600, width=1000, background='yellow')
+frame3.propagate(0)
+frame3.pack(side='top')
 
-c = Canvas(f3, width=1000, height=600, bg="blue")
-c.pack()
+canva = Canvas(frame3, width=1000, height=600, bg="blue")
+canva.pack()
 p3 = PhotoImage(file='back.gif')
-c.create_image(0, 0, image=p3, anchor=NW)
+canva.create_image(0, 0, image=p3, anchor=NW)
 
-l4 = Label(f3, text='Enter the required data (in INR) :-', font=font1)
-l4.place(x=250, y=100)
+label4 = Label(frame3, text='Enter the required data (in INR) :-', font=font1)
+label4.place(x=250, y=100)
 
-l5 = Label(f3, text='Annual Income', font=font1)
-l5.place(x=250, y=160)
-e5 = Entry(f3, width=50, border=2)
-e5.insert(0, 'Enter Your Annual Income...')
-e5.bind('<FocusIn>', on_e5_click)
-e5.place(x=480, y=160)
+label5 = Label(frame3, text='Annual Income', font=font1)
+label5.place(x=250, y=160)
+entity5 = Entry(frame3, width=50, border=2)
+entity5.insert(0, 'Enter Your Annual Income...')
+entity5.bind('<FocusIn>', on_e5_click)
+entity5.place(x=480, y=160)
 
-l6 = Label(f3, text='Exemptions / Deductions', font=font1)
-l6.place(x=250, y=200)
-e6 = Entry(f3, width=50, border=2)
-e6.insert(0, 'Enter Your Exemptions / deductions...')
-e6.bind('<FocusIn>', on_e6_click)
-e6.place(x=480, y=200)
+label6 = Label(frame3, text='Exemptions / Deductions', font=font1)
+label6.place(x=250, y=200)
+entity6 = Entry(frame3, width=50, border=2)
+entity6.insert(0, 'Enter Your Exemptions / deductions...')
+entity6.bind('<FocusIn>', on_e6_click)
+entity6.place(x=480, y=200)
 
 
-def oldtax(ta):
-    total = 0
+def old_tax(taxable_amount):
+    total_tax = 0
     n = 0
-    while ta > 0:
+    while taxable_amount > 0:
         if n == 1:
-            if ta >= 250000:
-                total = total + 250000 * 5 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 5 / 100
             else:
-                total = total + ta * 5 / 100
+                total_tax = total_tax + taxable_amount * 5 / 100
         elif n == 2 or n == 3:
-            if ta >= 250000:
-                total = total + 250000 * 20 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 20 / 100
             else:
-                total = total + ta * 20 / 100
+                total_tax = total_tax + taxable_amount * 20 / 100
         elif n == 4:
-            total = total + ta * 30 / 100
+            total_tax = total_tax + taxable_amount * 30 / 100
             break
         else:
-            total = 0
-        ta = ta - 250000
+            total_tax = 0
+        taxable_amount = taxable_amount - 250000
         n = n + 1
-    cess = total * 4 / 100
-    return total + cess
+    cess = total_tax * 4 / 100
+    return total_tax + cess
 
 
-def newtax(ta):
-    total = 0
+def new_tax(taxable_amount):
+    total_tax = 0
     n = 0
-    while ta > 0:
+    while taxable_amount > 0:
         if n == 1:
-            if ta >= 250000:
-                total = total + 250000 * 5 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 5 / 100
             else:
-                total = total + ta * 5 / 100
+                total_tax = total_tax + taxable_amount * 5 / 100
         elif n == 2:
-            if ta >= 250000:
-                total = total + 250000 * 10 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 10 / 100
             else:
-                total = total + ta * 10 / 100
+                total_tax = total_tax + taxable_amount * 10 / 100
         elif n == 3:
-            if ta >= 250000:
-                total = total + 250000 * 15 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 15 / 100
             else:
-                total = total + ta * 15 / 100
+                total_tax = total_tax + taxable_amount * 15 / 100
         elif n == 4:
-            if ta >= 250000:
-                total = total + 250000 * 20 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 20 / 100
             else:
-                total = total + ta * 20 / 100
+                total_tax = total_tax + taxable_amount * 20 / 100
         elif n == 5:
-            if ta >= 250000:
-                total = total + 250000 * 25 / 100
+            if taxable_amount >= 250000:
+                total_tax = total_tax + 250000 * 25 / 100
             else:
-                total = total + ta * 25 / 100
+                total_tax = total_tax + taxable_amount * 25 / 100
         elif n == 6:
-            total = total + ta * 30 / 100
+            total_tax = total_tax + taxable_amount * 30 / 100
             break
         else:
-            total = 0
-        ta = ta - 250000
+            total_tax = 0
+        taxable_amount = taxable_amount - 250000
         n = n + 1
-    cess = total * 4 / 100
-    return total + cess
+    cess = total_tax * 4 / 100
+    return total_tax + cess
 
 
 def delete():
-    l8 = Label(f3, text="                                                                                         ",
+    label8 = Label(frame3, text="                                                                                         ",
                font=font1,
                background="white")
-    l8.place(x=480, y=300)
-    l10 = Label(f3, text="                                                                                        ",
+    label8.place(x=480, y=300)
+    label10 = Label(frame3, text="                                                                                        ",
                 font=font1,
                 background="white")
-    l10.place(x=480, y=340)
-    l12 = Label(f3, text="                                                                                        ",
+    label10.place(x=480, y=340)
+    label12 = Label(frame3, text="                                                                                        ",
                 font=font1,
                 background="white")
-    l12.place(x=480, y=380)
-    l14 = Label(f3, text="                                                                                        ",
+    label12.place(x=480, y=380)
+    label14 = Label(frame3, text="                                                                                        ",
                 font=font1,
                 background="white")
-    l14.place(x=480, y=420)
+    label14.place(x=480, y=420)
     # destroying the below label
-    er1 = Label(f3, text="                                                                                        ",
+    er1 = Label(frame3, text="                                                                                        ",
                 font=font1,
                 background="white")
     er1.place(x=600, y=100)
@@ -335,72 +349,72 @@ delete()
 
 
 def clear2():
-    e5.delete(0, END)
-    e5.insert(0, "")
-    e6.delete(0, END)
-    e6.insert(0, "")
+    entity5.delete(0, END)
+    entity5.insert(0, "")
+    entity6.delete(0, END)
+    entity6.insert(0, "")
 
 
 def calculate():
     delete()
 
-    at = e5.get()
-    ad = e6.get()
+    amount_taxable = entity5.get()
+    amount_deduction = entity6.get()
     try:
-        ta = int(at) - int(ad)
+        total_taxable_amount = int(amount_taxable) - int(amount_deduction)
     except:
         messagebox.showerror("Invalid Input", "Please enter valid Annual Tax and/or Exemption.")
         return 0
-    old = oldtax(ta)
-    new = newtax(int(ta))
-    tax_save = abs(new - old)
+    old_tax_amount = old_tax(total_taxable_amount)
+    new_tax_amount = new_tax(int(total_taxable_amount))
+    tax_save = abs(new_tax_amount - old_tax_amount)
     tax_save = round(tax_save, 2)
-    if new > old:
+    if new_tax_amount > old_tax_amount:
         better = "Old tax"
-    elif ta <= 250000:
+    elif total_taxable_amount <= 250000:
         better = "Income tax not applicable (Taxable income < 250000)"
     else:
         better = "New tax"
 
-    if int(ad) > int(at):
-        old = 0
-        new = 0
+    if int(amount_deduction) > int(amount_taxable):
+        old_tax_amount = 0
+        new_tax_amount = 0
         tax_save = 0.0
         better = "Deductions cannot be more than income"
         det = " Enter the details correctly!!! "
-        er1 = Label(f3, text=det, font=font1, bg='white', fg='red')
+        er1 = Label(frame3, text=det, font=font1, bg='white', fg='red')
         er1.place(x=500, y=100)
 
-    l7 = Label(f3, text='Old tax', font=font1)
-    l7.place(x=250, y=300)
+    label7 = Label(frame3, text='Old tax', font=font1)
+    label7.place(x=250, y=300)
 
-    l8 = Label(f3, text=str(old), font=font1)
-    l8.place(x=480, y=300)
+    label8 = Label(frame3, text=str(old_tax_amount), font=font1)
+    label8.place(x=480, y=300)
 
-    l9 = Label(f3, text='New tax', font=font1)
-    l9.place(x=250, y=340)
+    label9 = Label(frame3, text='New tax', font=font1)
+    label9.place(x=250, y=340)
 
-    l10 = Label(f3, text=str(new), font=font1)
-    l10.place(x=480, y=340)
+    label10 = Label(frame3, text=str(new_tax_amount), font=font1)
+    label10.place(x=480, y=340)
 
-    l11 = Label(f3, text='Tax saving', font=font1)
-    l11.place(x=250, y=380)
+    label11 = Label(frame3, text='Tax saving', font=font1)
+    label11.place(x=250, y=380)
 
-    l12 = Label(f3, text=str(tax_save), font=font1)
-    l12.place(x=480, y=380)
+    label12 = Label(frame3, text=str(tax_save), font=font1)
+    label12.place(x=480, y=380)
 
-    l13 = Label(f3, text='Better option', font=font1)
-    l13.place(x=250, y=420)
+    label13 = Label(frame3, text='Better option', font=font1)
+    label13.place(x=250, y=420)
 
-    l14 = Label(f3, text=better, font=font1)
-    l14.place(x=480, y=420)
+    label14 = Label(frame3, text=better, font=font1)
+    label14.place(x=480, y=420)
 
 
-HoverButton(f3, text="Calculate", activebackground="#6382b8", cursor="hand2", command=calculate, width=10,
+HoverButton(frame3, text="Calculate", activebackground="#6382b8", cursor="hand2", command=calculate, width=10,
             border=4).place(x=500, y=250)
-HoverButton(f3, text="Reset", activebackground="#6382b8", cursor="hand2", command=delete, width=10, border=4).place(
+HoverButton(frame3, text="Reset", activebackground="#6382b8", cursor="hand2", command=delete, width=10, border=4).place(
     x=610, y=250)
-HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(
+HoverButton(frame3, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(
     x=720, y=250)
 
 
@@ -422,15 +436,15 @@ def learn_more():
                             message=str(readme))
 
 
-HoverButton(f3, text="Learn More", activebackground="#6382b8", cursor="hand2", command=learn_more,
+HoverButton(frame3, text="Learn More", activebackground="#6382b8", cursor="hand2", command=learn_more,
             foreground='white',
             font=font1, width=10, border=4, bg='#ad0414').place(
     x=280, y=500)
 
-HoverButton(f3, text="User Details", activebackground="#6382b8", cursor="hand2", command=details, foreground='white',
+HoverButton(frame3, text="User Details", activebackground="#6382b8", cursor="hand2", command=details, foreground='white',
             font=font1, width=10, border=4, bg='#ad0414').place(
     x=450, y=500)
-HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
+HoverButton(frame3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
             font=font1, width=8, border=4, bg='#ad0414').place(x=630, y=500)
 
 
@@ -443,7 +457,7 @@ def exit_win():
         root.destroy()
 
 
-HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command=exit_win, foreground='white', width=8,
+HoverButton(frame3, text="Exit", cursor="hand2", activebackground="#6382b8", command=exit_win, foreground='white', width=8,
             font=font1, border=4, bg='#ad0414').place(x=800, y=500)
 
 root.mainloop()
