@@ -180,7 +180,7 @@ l5.place(x=250, y=160)
 e5 = Entry(f3, width=50, border=2)
 e5.place(x=480, y=160)
 
-l6 = Label(f3, text='Exemptions / deductions', font=font1)
+l6 = Label(f3, text='Exemptions / Deductions', font=font1)
 l6.place(x=250, y=200)
 e6 = Entry(f3, width=50, border=2)
 e6.place(x=480, y=200)
@@ -296,11 +296,11 @@ def calculate():
     tax_save = abs(new - old)
     tax_save = round(tax_save, 2)
     if new > old:
-        better = "old tax"
+        better = "Old tax"
     elif ta <= 250000:
         better = "Income tax not applicable (Taxable income < 250000)"
     else:
-        better = "new tax"
+        better = "New tax"
 
     if int(ad) > int(at):
         old = 0
@@ -329,7 +329,7 @@ def calculate():
     l12 = Label(f3, text=str(tax_save), font=font1)
     l12.place(x=480, y=380)
 
-    l13 = Label(f3, text='better option', font=font1)
+    l13 = Label(f3, text='Better option', font=font1)
     l13.place(x=250, y=420)
 
     l14 = Label(f3, text=better, font=font1)
