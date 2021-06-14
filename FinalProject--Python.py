@@ -290,50 +290,57 @@ def calculate():
 
     at = e5.get()
     ad = e6.get()
-    ta = int(at) - int(ad)
-    old = oldtax(ta)
-    new = newtax(int(ta))
-    tax_save = abs(new - old)
-    tax_save = round(tax_save, 2)
-    if new > old:
-        better = "old tax"
-    elif ta <= 250000:
-        better = "Income tax not applicable (Taxable income < 250000)"
+    if (re.search("^[0-9]+$", at) and re.search("^[0-9]+$", ad)):
+        ta = int(at) - int(ad)
+        old = oldtax(ta)
+        new = newtax(int(at))
+        tax_save = abs(new - old)
+        tax_save = round(tax_save, 2)
+        if new > old:
+            better = "old tax"
+        elif ta <= 250000:
+            better = "Income tax not applicable (Taxable income < 250000)"
+        else:
+            better = "new tax"
+
+        if int(ad)>int(at):
+            old=0
+            new=0
+            tax_sav=0
+            better = "Deductions cannot be more than income"
+            det=" Enter the details correctly!!! "
+            er1=Label(f3, text=det, font=font1, bg='white', fg='red')
+            er1.place(x=500, y=100)
+
+        l7 = Label(f3, text='Old tax', font=font1)
+        l7.place(x=250, y=300)
+
+        l8 = Label(f3, text=str(old), font=font1)
+        l8.place(x=480, y=300)
+
+        l9 = Label(f3, text='New tax', font=font1)
+        l9.place(x=250, y=340)
+
+        l10 = Label(f3, text=str(new), font=font1)
+        l10.place(x=480, y=340)
+
+        l11 = Label(f3, text='Tax saving', font=font1)
+        l11.place(x=250, y=380)
+
+        l12 = Label(f3, text=str(tax_save), font=font1)
+        l12.place(x=480, y=380)
+
+        l13 = Label(f3, text='better option', font=font1)
+        l13.place(x=250, y=420)
+
+        l14 = Label(f3, text=better, font=font1)
+        l14.place(x=480, y=420)
+
+    elif (len(at) == 0 or len(ad) == 0):
+        messagebox.showerror("No Input", "Please enter a valid input in Annual Tax and Exemptions.")
+
     else:
-        better = "new tax"
-
-    if int(ad) > int(at):
-        old = 0
-        new = 0
-        tax_save = 0.0
-        better = "Deductions cannot be more than income"
-        det = " Enter the details correctly!!! "
-        er1 = Label(f3, text=det, font=font1, bg='white', fg='red')
-        er1.place(x=500, y=100)
-
-    l7 = Label(f3, text='Old tax', font=font1)
-    l7.place(x=250, y=300)
-
-    l8 = Label(f3, text=str(old), font=font1)
-    l8.place(x=480, y=300)
-
-    l9 = Label(f3, text='New tax', font=font1)
-    l9.place(x=250, y=340)
-
-    l10 = Label(f3, text=str(new), font=font1)
-    l10.place(x=480, y=340)
-
-    l11 = Label(f3, text='Tax saving', font=font1)
-    l11.place(x=250, y=380)
-
-    l12 = Label(f3, text=str(tax_save), font=font1)
-    l12.place(x=480, y=380)
-
-    l13 = Label(f3, text='better option', font=font1)
-    l13.place(x=250, y=420)
-
-    l14 = Label(f3, text=better, font=font1)
-    l14.place(x=480, y=420)
+        messagebox.showerror("Invalid Input", "Annual Tax and Exemptions must be numbers.")
 
 
 HoverButton(f3, text="Calculate", activebackground="#6382b8", cursor="hand2", command=calculate, width=10,
