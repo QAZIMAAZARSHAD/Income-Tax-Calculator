@@ -200,7 +200,7 @@ git push -u origin <your_branch_name>
    <td align="center"><a href="https://github.com/skimran2000"><img src="https://avatars.githubusercontent.com/u/78163908?v=4" height="80px" width="80px"/><br/><sub><b>Shaik Imranuddin</b></sub></a></td>
    <td align="center"><a href="https://github.com/Umesh-01"><img src="https://avatars.githubusercontent.com/u/83420185?v=4" height="80px" width="80px"/><br/><sub><b>Umesh Singh</b></sub></a></td>
     <td align="center"><a href="https://github.com/hellosafwaan"><img src="https://avatars.githubusercontent.com/u/83726810?v=4" height="80px" width="80px"/><br/><sub><b>Safwaan</b></sub></a></td>
-   
+    <td align="center"><a href="https://github.com/Lovishk022"><img src="https://avatars.githubusercontent.com/u/67220370?v=4" height="80px" width="80px"/><br/><sub><b>Lovish Kumar</b></sub></a></td>
 <!--    Uncomment the below code and add as per your profile to add section of contributors in readme -->
 <!--    <td align="center"><a href="https://github.com/jhondoe"><img src="https://avatars.githubusercontent.com/u/44448888?v=4" height="120px" width="120px"/><br/><sub><b>Jhon Doe</b></sub></a></td> -->
    
