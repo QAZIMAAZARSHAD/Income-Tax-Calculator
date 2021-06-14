@@ -4,6 +4,8 @@ import tkinter.messagebox as mbox
 import re
 import tkinter as tk
 
+# WM_DELETE_WINDOW
+
 root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
@@ -340,6 +342,9 @@ def clear2():
     e6.delete(0, END)
     e6.insert(0, "")
 
+# def exit_win():
+#     if messagebox.askokcancel("Exit", "Do you want to exit?"):
+#         root.destroy
 
 def calculate():
     delete()
@@ -446,4 +451,5 @@ def exit_win():
 HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command=exit_win, foreground='white', width=8,
             font=font1, border=4, bg='#ad0414').place(x=800, y=500)
 
+root.protocol("WM_DELETE_WINDOW", exit_win)
 root.mainloop()
