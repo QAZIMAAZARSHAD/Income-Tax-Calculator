@@ -335,10 +335,8 @@ def calculate():
 
         l14 = Label(f3, text=better, font=font1)
         l14.place(x=480, y=420)
-
     elif (len(at) == 0 or len(ad) == 0):
-        messagebox.showerror("No Input", "Please enter a valid input in Annual Tax and Exemptions.")
-
+        messagebox.showerror("No Input", "Please enter a valid input in Annual Tax and Exemption.")
     else:
         messagebox.showerror("Invalid Input", "Annual Tax and Exemptions must be numbers.")
 
