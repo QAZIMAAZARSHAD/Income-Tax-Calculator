@@ -439,8 +439,7 @@ def end():
 
 
 def exit_win():
-    ans = mbox.askyesno('Exit', 'Are you sure?')
-    if (ans):
+    if messagebox.askokcancel("Exit", "Do you want to exit?"):
         root.destroy()
 
 
