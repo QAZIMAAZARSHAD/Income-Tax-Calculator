@@ -106,8 +106,8 @@ def calculate_tax():
         better = "new tax"
 
     if int(amount_deduction) > int(amount_taxable):
-        old = 0
-        new = 0
+        old_tax_amount = 0
+        new_tax_amount = 0
         tax_save = 0.0
         better = "Deductions cannot be more than income"
         det = " Enter the details correctly!!! "
@@ -117,13 +117,13 @@ def calculate_tax():
     label7 = Label(frame3, text='Old tax', font=font1)
     label7.place(x=250, y=300)
 
-    label8 = Label(frame3, text=str(old), font=font1)
+    label8 = Label(frame3, text=str(old_tax_amount), font=font1)
     label8.place(x=480, y=300)
 
     label9 = Label(frame3, text='New tax', font=font1)
     label9.place(x=250, y=340)
 
-    label10 = Label(frame3, text=str(new), font=font1)
+    label10 = Label(frame3, text=str(new_tax_amount), font=font1)
     label10.place(x=480, y=340)
 
     label11 = Label(frame3, text='Tax saving', font=font1)
@@ -297,6 +297,7 @@ def clear2():
     entity5.insert(0, "")
     entity6.delete(0, END)
     entity6.insert(0, "")
+
 
 ###############################################
 
