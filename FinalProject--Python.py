@@ -93,7 +93,7 @@ mycontact = StringVar(root)
 myemailid = StringVar(root)
 
 firstclick1 = True
-def on_e1_click(event): # ------------------------------------------------------------------
+def on_e1_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick1
 
@@ -102,7 +102,7 @@ def on_e1_click(event): # ------------------------------------------------------
         e1.delete(0, "end") # delete all the text in the entry
 
 firstclick2 = True
-def on_e2_click(event): # ------------------------------------------------------------------
+def on_e2_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick2
 
@@ -111,7 +111,7 @@ def on_e2_click(event): # ------------------------------------------------------
         e2.delete(0, "end") # delete all the text in the entry
 
 firstclick3 = True
-def on_e3_click(event): # ------------------------------------------------------------------
+def on_e3_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick3
 
@@ -135,22 +135,22 @@ l0.place(x=250, y=100)
 l1 = Label(f2, text='Name', font=font1)
 l1.place(x=250, y=140)
 e1 = Entry(f2, textvariable=myname, width=50, border=2)
-e1.insert(0, 'Enter Your Name...') # ------------------------------------------------------
-e1.bind('<FocusIn>', on_e1_click) # ---------------------------------------------------
+e1.insert(0, 'Enter Your Name...')
+e1.bind('<FocusIn>', on_e1_click)
 e1.place(x=450, y=140)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
 e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
-e2.insert(0, 'Enter Your Contact...') # ------------------------------------------------------
-e2.bind('<FocusIn>', on_e2_click) # ---------------------------------------------------
+e2.insert(0, 'Enter Your Contact...')
+e2.bind('<FocusIn>', on_e2_click)
 e2.place(x=450, y=180)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
 e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
-e3.insert(0, 'Enter Your Email Id...') # ------------------------------------------------------
-e3.bind('<FocusIn>', on_e3_click) # ---------------------------------------------------
+e3.insert(0, 'Enter Your Email Id...')
+e3.bind('<FocusIn>', on_e3_click)
 e3.place(x=450, y=220)
 
 
@@ -197,7 +197,7 @@ def details():
                         )
 
 firstclick5 = True
-def on_e5_click(event): # ------------------------------------------------------------------
+def on_e5_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick5
 
@@ -206,7 +206,7 @@ def on_e5_click(event): # ------------------------------------------------------
         e5.delete(0, "end") # delete all the text in the entry
 
 firstclick6 = True
-def on_e6_click(event): # ------------------------------------------------------------------
+def on_e6_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick6
 
@@ -230,15 +230,15 @@ l4.place(x=250, y=100)
 l5 = Label(f3, text='Annual Income', font=font1)
 l5.place(x=250, y=160)
 e5 = Entry(f3, width=50, border=2)
-e5.insert(0, 'Enter Your Annual Income...') # ------------------------------------------------------
-e5.bind('<FocusIn>', on_e5_click) # ---------------------------------------------------
+e5.insert(0, 'Enter Your Annual Income...')
+e5.bind('<FocusIn>', on_e5_click)
 e5.place(x=480, y=160)
 
 l6 = Label(f3, text='Exemptions / deductions', font=font1)
 l6.place(x=250, y=200)
 e6 = Entry(f3, width=50, border=2)
-e6.insert(0, 'Enter Your Exemptions / deductions...') # ------------------------------------------------------
-e6.bind('<FocusIn>', on_e6_click) # ---------------------------------------------------
+e6.insert(0, 'Enter Your Exemptions / deductions...')
+e6.bind('<FocusIn>', on_e6_click)
 e6.place(x=480, y=200)
 
 
