@@ -4,8 +4,6 @@ import tkinter.messagebox as mbox
 import re
 import tkinter as tk
 
-# WM_DELETE_WINDOW
-
 root = Tk()
 root.title("Income Tax Calculator")
 root.geometry('1000x600')
@@ -94,6 +92,13 @@ myname = StringVar(root)
 mycontact = StringVar(root)
 myemailid = StringVar(root)
 
+
+def on_i_click():
+    messagebox.showinfo("Valid Entry", "Valid Names: eg.\tAlex\n\t\tAlex sharma\n\t\tAlex Panth Sharma\n\n"
+                                       "Valid Number: eg. \t3819481747\n\t\t7858173627\n\t\t9843728184\n\n"
+                                       "Valid Email Id: eg.\temail@example.com\n\t\tsomething@gmail.com\n\t\temail@subdomain.example.com\n\t\t1234567890@example.com\n\t\t_______@example.com\n\t\temail@example.co.jp\n\t\temail@example.ac.in\n\t\tfirstname-lastname@example.com\n\t\tsomeone@smething.org\n\n"
+                        )
+
 firstclick1 = True
 def on_e1_click(event):
     """function that gets called whenever entry1 is clicked"""
@@ -130,6 +135,10 @@ c = Canvas(f2, width=1000, height=600, bg="blue")
 c.pack()
 p2 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p2, anchor=NW)
+
+HoverButton(f2, text="i", activebackground="#6382b8", cursor="hand2", command=on_i_click,font="Helvetica 10 bold", width=2, border=2).place(
+    x= 450, y = 100)
+
 
 l0 = Label(f2, text='Enter your details :-', font=font1)
 l0.place(x=250, y=100)
@@ -342,9 +351,6 @@ def clear2():
     e6.delete(0, END)
     e6.insert(0, "")
 
-# def exit_win():
-#     if messagebox.askokcancel("Exit", "Do you want to exit?"):
-#         root.destroy
 
 def calculate():
     delete()
