@@ -3,6 +3,7 @@ from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
 import tkinter as tk
+from PIL import Image, ImageTk
 
 # WM_DELETE_WINDOW
 
@@ -94,6 +95,13 @@ myname = StringVar(root)
 mycontact = StringVar(root)
 myemailid = StringVar(root)
 
+
+def on_i_click(event):
+    messagebox.showinfo("Valid Entry", "Valid Names: eg.\tAlex\n\t\tAlex sharma\n\t\tAlex Panth Sharma\n\n"
+                                       "Valid Number: eg. \t3819481747\n\t\t7858173627\n\t\t9843728184\n\n"
+                                       "Valid Email Id: eg.\temail@example.com\n\t\tsomething@gmail.com\n\t\temail@subdomain.example.com\n\t\t1234567890@example.com\n\t\t_______@example.com\n\t\temail@example.co.jp\n\t\temail@example.ac.in\n\t\tfirstname-lastname@example.com\n\t\tsomeone@smething.org\n\n"
+                        )
+
 firstclick1 = True
 def on_e1_click(event):
     """function that gets called whenever entry1 is clicked"""
@@ -130,6 +138,16 @@ c = Canvas(f2, width=1000, height=600, bg="blue")
 c.pack()
 p2 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p2, anchor=NW)
+
+# load image
+image = Image.open("i_image1.jpg")
+photo = ImageTk.PhotoImage(image)
+
+# label with image
+i_label = tk.Label(f2, image=photo)
+i_label.place(x= 450, y = 100)
+# bind click event to image
+i_label.bind('<Button-1>', on_i_click)
 
 l0 = Label(f2, text='Enter your details :-', font=font1)
 l0.place(x=250, y=100)
