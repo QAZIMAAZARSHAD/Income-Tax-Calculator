@@ -343,7 +343,7 @@ def delete():
     er1 = Label(f3, text="                                                                                        ",
                 font=font1,
                 background="white")
-    er1.place(x=600, y=100)
+    er1.place(x=540, y=100)
 
 
 delete()
@@ -384,7 +384,7 @@ def calculate():
         better = "Deductions cannot be more than income"
         det = " Enter the details correctly!!! "
         er1 = Label(f3, text=det, font=font1, bg='white', fg='red')
-        er1.place(x=500, y=100)
+        er1.place(x=540, y=100)
 
     l7 = Label(f3, text='Old tax', font=font1)
     l7.place(x=250, y=300)
