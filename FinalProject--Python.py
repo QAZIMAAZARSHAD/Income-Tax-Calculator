@@ -41,6 +41,10 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
+#Change logo in title bar
+l=PhotoImage(file='Final_Logo.gif')
+root.iconphoto(False,l)
+
 HoverButton(f1, text="Start", activebackground="#6382b8", cursor="hand2", font=font1, foreground='white',
             command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450, y=500)
 
