@@ -24,4 +24,4 @@ What are New Tax  ?
 
 The new tax regime is different from the old tax regime in two aspects.
 One, in the new regime, the number of tax slabs has increased, accompanied by lowering of rates in the sub-Rs 15 lakh range.
-Two, all the exemptions and deductions that were being used by taxpayers in the existing regime won’t be available in the new regime.
+Two, all the exemptions and deductions that were being used by taxpayers in the existing regime won't be available in the new regime.
