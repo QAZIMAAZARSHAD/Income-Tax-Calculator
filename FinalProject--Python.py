@@ -3,6 +3,31 @@ from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
 import tkinter as tk
+import pyglet
+#Create splash screen
+animation=pyglet.image.load_animation('Splash Screen.gif')
+animSprite=pyglet.sprite.Sprite(animation)
+w=animSprite.width
+h=animSprite.height
+
+win=pyglet.window.Window(width=w,height=h,style='borderless')
+win.set_location(200,100)
+
+r,g,b,alpha=0.5,0.5,0.8,0.5
+pyglet.gl.glClearColor(r,g,b,alpha)
+@win.event
+
+def on_draw():
+	win.clear()
+	animSprite.draw()
+
+def close(event):
+	win.close()
+
+pyglet.clock.schedule_once(close,5.0)
+
+pyglet.app.run()
+
 
 root = Tk()
 root.title("Income Tax Calculator")
