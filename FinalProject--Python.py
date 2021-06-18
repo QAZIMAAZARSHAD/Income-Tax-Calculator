@@ -3,6 +3,7 @@ from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
 import tkinter as tk
+import smtplib
 import pyglet
 #Create splash screen
 animation=pyglet.image.load_animation('Splash Screen.gif')
@@ -27,7 +28,6 @@ def close(event):
 pyglet.clock.schedule_once(close,5.0)
 
 pyglet.app.run()
-
 
 root = Tk()
 root.title("Income Tax Calculator")
@@ -346,6 +346,21 @@ def newtax(ta):
     cess = total * 4 / 100
     return total + cess
 
+s=smtplib.SMTP("smtp.gmail.com",587)
+s.starttls()
+
+def send_message():
+    sender_email="Ram98765Soni@gmail.com"
+    sender_pass="R@S98765@"
+    to=myemailid.get()
+    subject="Tax Calculation Summary"
+    email_body_info=f"Hello {myname.get()} \n Your tax calculation summary is \n Oldtax: {old} \n Newtax: {new} \n Taxsave: {tax_save}"
+    finalMessage='Subject: {}\n\n{} '.format(subject,email_body_info)
+    server=smtplib.SMTP_SSL("smtp.gmail.com",465)
+    server.login(sender_email,sender_pass)
+    print("Login successfull")
+    server.sendmail(sender_email,to,finalMessage)
+    print("Message sent")
 
 def delete():
     l8 = Label(f3, text="                                                                                         ",
@@ -380,7 +395,9 @@ def clear2():
     e6.delete(0, END)
     e6.insert(0, "")
 
-
+old=0
+new=0
+tax_save=0
 def calculate():
     delete()
 
@@ -391,6 +408,9 @@ def calculate():
     except:
         messagebox.showerror("Invalid Input", "Please enter valid Annual Tax and/or Exemption.")
         return 0
+    global old
+    global new
+    global tax_save
     old = oldtax(ta)
     new = newtax(int(ta))
     tax_save = abs(new - old)
@@ -443,6 +463,11 @@ HoverButton(f3, text="Reset", activebackground="#6382b8", cursor="hand2", comman
 HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(
     x=720, y=250)
 
+def sharemail():
+    a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
+    if a=="ok":
+        send_message()
+
 
 def credit():
     messagebox.showinfo('Credits',
@@ -472,6 +497,8 @@ HoverButton(f3, text="User Details", activebackground="#6382b8", cursor="hand2",
     x=450, y=500)
 HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
             font=font1, width=8, border=4, bg='#ad0414').place(x=630, y=500)
+
+HoverButton(f3,text="Share With Mail",activebackground="#6382b8",cursor="hand2",command=sharemail,foreground='white',font=font1,width=15,border=4,bg='#ad0414').place(x=50,y=500)
 
 
 def end():
