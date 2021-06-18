@@ -367,9 +367,9 @@ def send_message():
     finalMessage='Subject: {}\n\n{} '.format(subject,email_body_info)
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login(sender_email,sender_pass)
-    print("Login successfull")
+    mbox.showinfo("Status","Login Successfull!")
     server.sendmail(sender_email,to,finalMessage)
-    print("Message sent")
+    mbox.showinfo("Status","Message Sent!")
 
 def delete():
     l8 = Label(f3, text="                                                                                         ",
@@ -486,10 +486,11 @@ def sharemail():
     elif (flag == False):
         mbox.showerror("Error", "You haven't calculated yet.")
     else:
-        a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
-        if a=="ok":
+        a=mbox.askokcancel("Share this User's Tax Info", f"Name: {myname.get()} \n\nIncome Tax calculation is: \nOldtax: {old}\nNewtax: {new}\nTaxsave: {tax_save}\n\n" + "Do you want to share this details?")
+        if a:
             send_message()
-
+        else:
+            mbox.showinfo("Status", "Message Not Sent!")
 
 def credit():
     messagebox.showinfo('Credits',
