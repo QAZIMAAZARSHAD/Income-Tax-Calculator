@@ -189,10 +189,18 @@ def tax_scheme():
     new_window = Toplevel(f2)
     new_window.title("Tax scheme")
     new_window.geometry("452x322")
+
+    # #Change logo in title bar
+    l = PhotoImage(file='Final_Logo.gif')
+    new_window.iconphoto(False, l)
+
     # Removing maximize/minimize option from "Check Tax Scheme" pop-up.
     new_window.resizable(0, 0)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
+# #Change logo in title bar
+# l=PhotoImage(file='Final_Logo.gif')
+# f2.iconphoto(False,l)
 
 logo = PhotoImage(file="image.gif")
 label = Label(f2, text="This is the main window")
@@ -441,6 +449,8 @@ HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", comman
 
 def sharemail():
     a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
+
+
     if a=="ok":
         send_message()
 
@@ -459,7 +469,7 @@ def learn_more():
         readme = f.read()
 
         # Display whole message
-        messagebox.showinfo(title="Title",
+        messagebox.showinfo(title="Learn More",
                             message=str(readme))
 
 
