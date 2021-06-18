@@ -382,7 +382,11 @@ def clear2():
 old=0
 new=0
 tax_save=0
+flag = False
 def calculate():
+    global flag
+    flag = True
+
     delete()
 
     at = e5.get()
@@ -448,11 +452,18 @@ HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", comman
     x=720, y=250)
 
 def sharemail():
-    a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
-
-
-    if a=="ok":
-        send_message()
+    at = e5.get()
+    ad = e6.get()
+    if (at == "Enter Your Annual Income..." or ad == "Enter Your Exemptions / deductions..." or at == "" or ad == ""):
+        mbox.showerror("Error", "You haven't entered any details.")
+    elif int(ad) > int(at):
+        mbox.showerror("Error", "You have entered incorrect details.")
+    elif (flag == False):
+        mbox.showerror("Error", "You haven't calculated yet.")
+    else:
+        a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
+        if a=="ok":
+            send_message()
 
 
 def credit():
