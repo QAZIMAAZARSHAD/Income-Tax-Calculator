@@ -20,11 +20,11 @@ pyglet.gl.glClearColor(r,g,b,alpha)
 @win.event
 
 def on_draw():
-	win.clear()
-	animSprite.draw()
+    win.clear()
+    animSprite.draw()
 
 def close(event):
-	win.close()
+    win.close()
 
 pyglet.clock.schedule_once(close,5.0)
 
@@ -358,6 +358,9 @@ def newtax(ta):
 s=smtplib.SMTP("smtp.gmail.com",587)
 s.starttls()
 
+def no_message():
+    mbox.showinfo("Sharing Status", "Message Not Sent!")
+
 def send_message():
     sender_email="Ram98765Soni@gmail.com"
     sender_pass="R@S98765@"
@@ -367,9 +370,9 @@ def send_message():
     finalMessage='Subject: {}\n\n{} '.format(subject,email_body_info)
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.login(sender_email,sender_pass)
-    print("Login successfull")
+    mbox.showinfo("Sharing Status", "Login Successful!")
     server.sendmail(sender_email,to,finalMessage)
-    print("Message sent")
+    mbox.showinfo("Sharing Status", "Message Sent!")
 
 def delete():
     l8 = Label(f3, text="                                                                                         ",
@@ -486,9 +489,12 @@ def sharemail():
     elif (flag == False):
         mbox.showerror("Error", "You haven't calculated yet.")
     else:
-        a=messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
-        if a=="ok":
+        mbox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
+
+        if mbox.askokcancel("Sharing Permission", "Do you Want to share details"):
             send_message()
+        else:
+            no_message()
 
 
 def credit():
