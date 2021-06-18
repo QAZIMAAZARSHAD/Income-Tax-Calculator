@@ -20,11 +20,11 @@ pyglet.gl.glClearColor(r,g,b,alpha)
 @win.event
 
 def on_draw():
-	win.clear()
-	animSprite.draw()
+    win.clear()
+    animSprite.draw()
 
 def close(event):
-	win.close()
+    win.close()
 
 pyglet.clock.schedule_once(close,5.0)
 
