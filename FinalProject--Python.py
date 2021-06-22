@@ -511,13 +511,13 @@ def learn_more():
 HoverButton(f3, text="Learn More", activebackground="#6382b8", cursor="hand2", command=learn_more,
             foreground='white',
             font=font1, width=10, border=4, bg='#ad0414').place(
-    x=280, y=500)
+    x=250, y=500)
 
 HoverButton(f3, text="User Details", activebackground="#6382b8", cursor="hand2", command=details, foreground='white',
             font=font1, width=10, border=4, bg='#ad0414').place(
-    x=450, y=500)
+    x=405, y=500)
 HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
-            font=font1, width=8, border=4, bg='#ad0414').place(x=630, y=500)
+            font=font1, width=8, border=4, bg='#ad0414').place(x=560, y=500)
 
 HoverButton(f3,text="Share With Mail",activebackground="#6382b8",cursor="hand2",command=sharemail,foreground='white',font=font1,width=15,border=4,bg='#ad0414').place(x=50,y=500)
 
@@ -526,9 +526,13 @@ def pdfdown():
         pdf.add_page()
 
         pdf.set_font('helvetica','', 14)
+
         pdf.set_text_color(0,0,0)
 
+
+
         pdf.image('Image.png', x=0, y=0, w=210, h=297)
+
 
         pdf.text(47,106,myname.get())
         pdf.text(59,117,mycontact.get())
@@ -541,10 +545,11 @@ def pdfdown():
         pdf.text(61,222,str(new))
         pdf.text(68,234,str(tax_save))
 
+
         pdf.output('Automated PDF Report.pdf')
 
-HoverButton(f3, text="PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white', width=6,
-            font=font1, border=4, bg='#ad0414').place(x=825, y=380)
+HoverButton(f3, text="Generate PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white', width=12,
+            font=font1, border=4, bg='#ad0414').place(x=815, y=500)
 
 
 def end():
@@ -557,7 +562,7 @@ def exit_win():
 
 
 HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command=exit_win, foreground='white', width=8,
-            font=font1, border=4, bg='#ad0414').place(x=800, y=500)
+            font=font1, border=4, bg='#ad0414').place(x=690, y=500)
 
 root.protocol("WM_DELETE_WINDOW", exit_win)
 root.mainloop()
