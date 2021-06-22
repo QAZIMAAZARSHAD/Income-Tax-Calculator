@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import tkinter.messagebox as mbox
 import re
+from fpdf import FPDF
 import tkinter as tk
 import smtplib
 import pyglet
@@ -375,24 +376,24 @@ def send_message():
     mbox.showinfo("Sharing Status", "Message sent")
 
 def delete():
-    l8 = Label(f3, text="                                                                                         ",
+    l8 = Label(f3, text="                                                                 ",
                font=font1,
                background="white")
     l8.place(x=480, y=300)
-    l10 = Label(f3, text="                                                                                        ",
+    l10 = Label(f3, text="                                                                ",
                 font=font1,
                 background="white")
     l10.place(x=480, y=340)
-    l12 = Label(f3, text="                                                                                        ",
+    l12 = Label(f3, text="                                                                ",
                 font=font1,
                 background="white")
     l12.place(x=480, y=380)
-    l14 = Label(f3, text="                                                                                        ",
+    l14 = Label(f3, text="                                                                ",
                 font=font1,
                 background="white")
     l14.place(x=480, y=420)
     # destroying the below label
-    er1 = Label(f3, text="                                                                                        ",
+    er1 = Label(f3, text="                                                                              ",
                 font=font1,
                 background="white")
     er1.place(x=540, y=100)
@@ -416,6 +417,8 @@ def calculate():
     flag = True
 
     delete()
+    global at
+    global ad
 
     at = e5.get()
     ad = e6.get()
@@ -518,6 +521,31 @@ HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", comm
 
 HoverButton(f3,text="Share With Mail",activebackground="#6382b8",cursor="hand2",command=sharemail,foreground='white',font=font1,width=15,border=4,bg='#ad0414').place(x=50,y=500)
 
+def pdfdown():
+        pdf = FPDF(orientation = 'P', unit = 'mm', format = 'A4')
+        pdf.add_page()
+
+        pdf.set_font('helvetica','', 14)
+        pdf.set_text_color(0,0,0)
+
+        pdf.image('Image.png', x=0, y=0, w=210, h=297)
+
+        pdf.text(47,106,myname.get())
+        pdf.text(59,117,mycontact.get())
+        pdf.text(56,127,myemailid.get())
+
+        pdf.text(84,162,str(at))
+        pdf.text(111,174,str(ad))
+
+        pdf.text(59,210,str(old))
+        pdf.text(61,222,str(new))
+        pdf.text(68,234,str(tax_save))
+
+        pdf.output('Automated PDF Report.pdf')
+
+HoverButton(f3, text="PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white', width=6,
+            font=font1, border=4, bg='#ad0414').place(x=825, y=380)
+
 
 def end():
     root.destroy()
@@ -533,3 +561,4 @@ HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command
 
 root.protocol("WM_DELETE_WINDOW", exit_win)
 root.mainloop()
+
