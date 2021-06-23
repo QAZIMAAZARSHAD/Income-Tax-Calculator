@@ -547,6 +547,7 @@ def pdfdown():
 
 
         pdf.output('Automated PDF Report.pdf')
+	mbox.showinfo("PDF Status", "PDF Downloaded")
 
 HoverButton(f3, text="Generate PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white', width=12,
             font=font1, border=4, bg='#ad0414').place(x=250, y=500)
