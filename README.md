@@ -1,6 +1,6 @@
 # Income Tax Calculator 💰
 
-
+<center><img src="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/Final_Logo.gif?raw=true" alt="logo" width="200"/></center>
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)  [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/graphs/commit-activity)
