@@ -7,27 +7,30 @@ import tkinter as tk
 import smtplib
 import pyglet
 
-#Create splash screen
-animation=pyglet.image.load_animation('Splash Screen.gif')
-animSprite=pyglet.sprite.Sprite(animation)
-w=animSprite.width
-h=animSprite.height
+# Create splash screen
+animation = pyglet.image.load_animation('Splash Screen.gif')
+animSprite = pyglet.sprite.Sprite(animation)
+w = animSprite.width
+h = animSprite.height
 
-win=pyglet.window.Window(width=w,height=h,style='borderless')
-win.set_location(200,100)
+win = pyglet.window.Window(width=w, height=h, style='borderless')
+win.set_location(200, 100)
 
-r,g,b,alpha=0.5,0.5,0.8,0.5
-pyglet.gl.glClearColor(r,g,b,alpha)
+r, g, b, alpha = 0.5, 0.5, 0.8, 0.5
+pyglet.gl.glClearColor(r, g, b, alpha)
+
+
 @win.event
-
 def on_draw():
-	win.clear()
-	animSprite.draw()
+    win.clear()
+    animSprite.draw()
+
 
 def close(event):
-	win.close()
+    win.close()
 
-pyglet.clock.schedule_once(close,5.0)
+
+pyglet.clock.schedule_once(close, 5.0)
 
 pyglet.app.run()
 
@@ -38,6 +41,100 @@ root.maxsize(1000, 600)
 root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
+
+# ------------------------------------------------------
+
+class Keypad(tk.Frame):
+
+    cells = [
+        ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '&', '*', '/', '\'', '.', ',', ';', ':', '?', '<', '>'],
+        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+    ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.target = None
+        self.memory = ''
+
+        for y, row in enumerate(self.cells):
+            for x, item in enumerate(row):
+                b = tk.Button(self, text=item, command=lambda text=item:self.append(text))
+                b.grid(row=y, column=x, sticky='news')
+
+        x = tk.Button(self, text='Space', command=self.space)
+        x.grid(row=4, column=0, columnspan='6', sticky='news')
+
+        x = tk.Button(self, text='tab', command=self.tab)
+        x.grid(row=4, column=6, columnspan='5', sticky='news')
+
+        x = tk.Button(self, text='Backspace', command=self.backspace)
+        x.grid(row=4, column=11,columnspan='5', sticky='news')
+
+        x = tk.Button(self, text='Clear', command=self.clear)
+        x.grid(row=4, column=16, columnspan='5',  sticky='news')
+
+        x = tk.Button(self, text='Hide', command=self.hide)
+        x.grid(row=4, column=21, columnspan='5', sticky='news')
+
+
+    def get(self):
+        if self.target:
+            return self.target.get()
+
+    def append(self, text):
+        if self.target:
+            self.target.insert('end', text)
+
+    def clear(self):
+        if self.target:
+            self.target.delete(0, 'end')
+
+    def backspace(self):
+        if self.target:
+            text = self.get()
+            text = text[:-1]
+            self.clear()
+            self.append(text)
+
+    def space(self):
+        if self.target:
+            text = self.get()
+            text = text + " "
+            self.clear()
+            self.append(text)
+
+    def tab(self):
+        if self.target:
+            text = self.get()
+            text = text + "     "
+            self.clear()
+            self.append(text)
+
+    def copy(self):
+        #TODO: copy to clipboad
+        if self.target:
+            self.memory = self.get()
+            self.label['text'] = 'memory: ' + self.memory
+            print(self.memory)
+
+    def paste(self):
+        #TODO: copy from clipboad
+        if self.target:
+            self.append(self.memory)
+
+    def show(self, entry):
+        self.target = entry
+
+        self.place(relx=0.5, rely=0.5, anchor='c')
+
+    def hide(self):
+        self.target = None
+
+        self.place_forget()
+
+#-------------------------------------------------------
 
 
 class HoverButton(tk.Button):
@@ -68,9 +165,9 @@ c.pack()
 p1 = PhotoImage(file='front.gif')
 c.create_image(0, 0, image=p1, anchor=NW)
 
-#Change logo in title bar
-l=PhotoImage(file='Final_Logo.gif')
-root.iconphoto(False,l)
+# Change logo in title bar
+l = PhotoImage(file='Final_Logo.gif')
+root.iconphoto(False, l)
 
 HoverButton(f1, text="Start", activebackground="#6382b8", cursor="hand2", font=font1, foreground='white',
             command=des_f1, bg='#8b1c13', width=8, border=4).place(x=450, y=500)
@@ -130,32 +227,41 @@ def on_i_click():
                                        "Valid Email Id: eg.\temail@example.com\n\t\tsomething@gmail.com\n\t\temail@subdomain.example.com\n\t\t1234567890@example.com\n\t\t_______@example.com\n\t\temail@example.co.jp\n\t\temail@example.ac.in\n\t\tfirstname-lastname@example.com\n\t\tsomeone@smething.org\n\n"
                         )
 
+
 firstclick1 = True
+
+
 def on_e1_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick1
 
-    if firstclick1: # if this is the first time they clicked it
+    if firstclick1:  # if this is the first time they clicked it
         firstclick1 = False
-        e1.delete(0, "end") # delete all the text in the entry
+        e1.delete(0, "end")  # delete all the text in the entry
+
 
 firstclick2 = True
+
+
 def on_e2_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick2
 
-    if firstclick2: # if this is the first time they clicked it
+    if firstclick2:  # if this is the first time they clicked it
         firstclick2 = False
-        e2.delete(0, "end") # delete all the text in the entry
+        e2.delete(0, "end")  # delete all the text in the entry
+
 
 firstclick3 = True
+
+
 def on_e3_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick3
 
-    if firstclick3: # if this is the first time they clicked it
+    if firstclick3:  # if this is the first time they clicked it
         firstclick3 = False
-        e3.delete(0, "end") # delete all the text in the entry
+        e3.delete(0, "end")  # delete all the text in the entry
 
 
 f2 = Frame(root, height=600, width=1000, background='red')
@@ -167,9 +273,11 @@ c.pack()
 p2 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p2, anchor=NW)
 
-HoverButton(f2, text="i", activebackground="#6382b8", cursor="hand2", command=on_i_click,font="Helvetica 10 bold", width=2, border=2).place(
-    x= 450, y = 100)
+HoverButton(f2, text="i", activebackground="#6382b8", cursor="hand2", command=on_i_click, font="Helvetica 10 bold",
+            width=2, border=2).place(
+    x=450, y=100)
 
+keypad = Keypad(root)
 
 l0 = Label(f2, text='Enter your details :-', font=font1)
 l0.place(x=250, y=100)
@@ -181,6 +289,8 @@ e1.insert(0, 'Enter Your Name...')
 e1.bind('<FocusIn>', on_e1_click)
 e1.place(x=450, y=140)
 
+HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e1),width=8, border=1).place(x=780, y=135)
+
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
 e2 = Entry(f2, textvariable=mycontact, width=50, border=2)
@@ -188,12 +298,16 @@ e2.insert(0, 'Enter Your Contact...')
 e2.bind('<FocusIn>', on_e2_click)
 e2.place(x=450, y=180)
 
+HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e2),width=8, border=1).place(x=780, y=175)
+
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
 e3 = Entry(f2, textvariable=myemailid, width=50, border=2)
 e3.insert(0, 'Enter Your Email Id...')
 e3.bind('<FocusIn>', on_e3_click)
 e3.place(x=450, y=220)
+
+HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e3), width=8, border=1).place(x=780, y=215)
 
 
 def clear1():
@@ -224,6 +338,7 @@ def tax_scheme():
     new_window.resizable(0, 0)
     Label(new_window, text="This is a Tax scheme", image=logo).pack()
 
+
 # #Change logo in title bar
 # l=PhotoImage(file='Final_Logo.gif')
 # f2.iconphoto(False,l)
@@ -246,23 +361,29 @@ def details():
                                                                                     'Email Id : ' + myemailid.get() + '\n\n'
                         )
 
+
 firstclick5 = True
+
+
 def on_e5_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick5
 
-    if firstclick5: # if this is the first time they clicked it
+    if firstclick5:  # if this is the first time they clicked it
         firstclick5 = False
-        e5.delete(0, "end") # delete all the text in the entry
+        e5.delete(0, "end")  # delete all the text in the entry
+
 
 firstclick6 = True
+
+
 def on_e6_click(event):
     """function that gets called whenever entry1 is clicked"""
     global firstclick6
 
-    if firstclick6: # if this is the first time they clicked it
+    if firstclick6:  # if this is the first time they clicked it
         firstclick6 = False
-        e6.delete(0, "end") # delete all the text in the entry
+        e6.delete(0, "end")  # delete all the text in the entry
 
 
 f3 = Frame(root, height=600, width=1000, background='yellow')
@@ -274,6 +395,8 @@ c.pack()
 p3 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p3, anchor=NW)
 
+keypad1 = Keypad(root)
+
 l4 = Label(f3, text='Enter the required data (in INR) :-', font=font1)
 l4.place(x=250, y=100)
 
@@ -284,12 +407,16 @@ e5.insert(0, 'Enter Your Annual Income...')
 e5.bind('<FocusIn>', on_e5_click)
 e5.place(x=480, y=160)
 
+HoverButton(f3, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad1.show(e5),width=8, border=1).place(x=800, y=155)
+
 l6 = Label(f3, text='Exemptions / Deductions', font=font1)
 l6.place(x=250, y=200)
 e6 = Entry(f3, width=50, border=2)
 e6.insert(0, 'Enter Your Exemptions / deductions...')
 e6.bind('<FocusIn>', on_e6_click)
 e6.place(x=480, y=200)
+
+HoverButton(f3, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad1.show(e6),width=8, border=1).place(x=800, y=195)
 
 
 def oldtax(ta):
@@ -356,24 +483,28 @@ def newtax(ta):
     cess = total * 4 / 100
     return total + cess
 
-s=smtplib.SMTP("smtp.gmail.com",587)
+
+s = smtplib.SMTP("smtp.gmail.com", 587)
 s.starttls()
+
 
 def no_send_message():
     mbox.showinfo("Sharing Status", "Message not sent")
 
+
 def send_message():
-    sender_email="Ram98765Soni@gmail.com"
-    sender_pass="R@S98765@"
-    to=myemailid.get()
-    subject="Tax Calculation Summary"
-    email_body_info=f"Hello {myname.get()} \n Your tax calculation summary is \n Oldtax: {old} \n Newtax: {new} \n Taxsave: {tax_save}"
-    finalMessage='Subject: {}\n\n{} '.format(subject,email_body_info)
-    server=smtplib.SMTP_SSL("smtp.gmail.com",465)
-    server.login(sender_email,sender_pass)
+    sender_email = "Ram98765Soni@gmail.com"
+    sender_pass = "R@S98765@"
+    to = myemailid.get()
+    subject = "Tax Calculation Summary"
+    email_body_info = f"Hello {myname.get()} \n Your tax calculation summary is \n Oldtax: {old} \n Newtax: {new} \n Taxsave: {tax_save}"
+    finalMessage = 'Subject: {}\n\n{} '.format(subject, email_body_info)
+    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server.login(sender_email, sender_pass)
     mbox.showinfo("Sharing Status", "Login successfull")
-    server.sendmail(sender_email,to,finalMessage)
+    server.sendmail(sender_email, to, finalMessage)
     mbox.showinfo("Sharing Status", "Message sent")
+
 
 def delete():
     l8 = Label(f3, text="                                                                 ",
@@ -408,10 +539,13 @@ def clear2():
     e6.delete(0, END)
     e6.insert(0, "")
 
-old=0
-new=0
-tax_save=0
+
+old = 0
+new = 0
+tax_save = 0
 flag = False
+
+
 def calculate():
     global flag
     flag = True
@@ -482,13 +616,16 @@ HoverButton(f3, text="Reset", activebackground="#6382b8", cursor="hand2", comman
 HoverButton(f3, text="Clear", activebackground="#6382b8", cursor="hand2", command=clear2, width=10, border=4).place(
     x=720, y=250)
 
+
 def sharemail():
-    messagebox.showinfo("User's tax info ",f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
+    messagebox.showinfo("User's tax info ",
+                        f"Name: {myname.get()} \n\n Income Tax calculation is: \n\n Oldtax: {old}  Newtax: {new}  Taxsave: {tax_save}")
 
     if mbox.askokcancel("Sharing Permission", "Do you Want to share this details?"):
         send_message()
     else:
         no_send_message()
+
 
 def credit():
     messagebox.showinfo('Credits',
@@ -519,37 +656,37 @@ HoverButton(f3, text="User Details", activebackground="#6382b8", cursor="hand2",
 HoverButton(f3, text="Credits", activebackground="#6382b8", cursor="hand2", command=credit, foreground='white',
             font=font1, width=8, border=4, bg='#ad0414').place(x=710, y=500)
 
-HoverButton(f3,text="Share With Mail",activebackground="#6382b8",cursor="hand2",command=sharemail,foreground='white',font=font1,width=15,border=4,bg='#ad0414').place(x=50,y=500)
+HoverButton(f3, text="Share With Mail", activebackground="#6382b8", cursor="hand2", command=sharemail,
+            foreground='white', font=font1, width=15, border=4, bg='#ad0414').place(x=50, y=500)
+
 
 def pdfdown():
-        pdf = FPDF(orientation = 'P', unit = 'mm', format = 'A4')
-        pdf.add_page()
+    pdf = FPDF(orientation='P', unit='mm', format='A4')
+    pdf.add_page()
 
-        pdf.set_font('helvetica','', 14)
+    pdf.set_font('helvetica', '', 14)
 
-        pdf.set_text_color(0,0,0)
+    pdf.set_text_color(0, 0, 0)
+
+    pdf.image('Image.png', x=0, y=0, w=210, h=297)
+
+    pdf.text(47, 106, myname.get())
+    pdf.text(59, 117, mycontact.get())
+    pdf.text(56, 127, myemailid.get())
+
+    pdf.text(84, 162, str(at))
+    pdf.text(111, 174, str(ad))
+
+    pdf.text(59, 210, str(old))
+    pdf.text(61, 222, str(new))
+    pdf.text(68, 234, str(tax_save))
+
+    pdf.output('Automated PDF Report.pdf')
+    mbox.showinfo("PDF Status", "PDF Downloaded")
 
 
-
-        pdf.image('Image.png', x=0, y=0, w=210, h=297)
-
-
-        pdf.text(47,106,myname.get())
-        pdf.text(59,117,mycontact.get())
-        pdf.text(56,127,myemailid.get())
-
-        pdf.text(84,162,str(at))
-        pdf.text(111,174,str(ad))
-
-        pdf.text(59,210,str(old))
-        pdf.text(61,222,str(new))
-        pdf.text(68,234,str(tax_save))
-
-
-        pdf.output('Automated PDF Report.pdf')
-	mbox.showinfo("PDF Status", "PDF Downloaded")
-
-HoverButton(f3, text="Generate PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white', width=12,
+HoverButton(f3, text="Generate PDF", cursor="hand2", activebackground="#6382b8", command=pdfdown, foreground='white',
+            width=12,
             font=font1, border=4, bg='#ad0414').place(x=250, y=500)
 
 
@@ -567,4 +704,3 @@ HoverButton(f3, text="Exit", cursor="hand2", activebackground="#6382b8", command
 
 root.protocol("WM_DELETE_WINDOW", exit_win)
 root.mainloop()
-
