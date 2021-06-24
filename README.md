@@ -55,7 +55,15 @@ Well! Take a chill pill. Don't be intimidated by those lengthy calculations beca
 
 ## About
 
-An income tax calculation system for a salaried person. This is a GUI application that allows Indian citizens to calculate their liable income tax and compare between new and old tax schemes. 
+<div>
+<div>
+<img src="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/Final_Logo.gif?raw=true" height = "90" align = "left"/>
+<div>
+An income tax calculation system for a salaried person. This is a GUI application that allows Indian citizens to calculate their liable income tax and compare between new and old tax schemes. </div>
+</div>
+<br>
+
+
 
 ## Application Walkthrough
 
