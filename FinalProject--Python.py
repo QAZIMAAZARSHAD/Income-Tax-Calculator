@@ -42,12 +42,68 @@ root.minsize(1000, 600)
 font1 = ("Times", 14, "bold")
 font2 = ("Times", 13, "bold")
 
-# ------------------------------------------------------
-
-class Keypad(tk.Frame):
+# ------------------------------- for only contact no., income and exemption/deduction -----------------------
+class Keypad_digits(tk.Frame):
 
     cells = [
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '&', '*', '/', '\'', '.', ',', ';', ':', '?', '<', '>'],
+        ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+    ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.target = None
+        self.memory = ''
+
+        for y, row in enumerate(self.cells):
+            for x, item in enumerate(row):
+                b = tk.Button(self, text=item, command=lambda text=item:self.append(text))
+                b.grid(row=y, column=x, sticky='news')
+
+        x = tk.Button(self, text='Backspace', command=self.backspace)
+        x.grid(row=1, column=0,columnspan='4', sticky='news')
+
+        x = tk.Button(self, text='Clear', command=self.clear)
+        x.grid(row=1, column=4, columnspan='3',  sticky='news')
+
+        x = tk.Button(self, text='Hide', command=self.hide)
+        x.grid(row=1, column=7, columnspan='3', sticky='news')
+
+
+    def get(self):
+        if self.target:
+            return self.target.get()
+
+    def append(self, text):
+        if self.target:
+            self.target.insert('end', text)
+
+    def clear(self):
+        if self.target:
+            self.target.delete(0, 'end')
+
+    def backspace(self):
+        if self.target:
+            text = self.get()
+            text = text[:-1]
+            self.clear()
+            self.append(text)
+
+    def show(self, entry):
+        self.target = entry
+
+        self.place(relx=0.5, rely=0.5, anchor='c')
+
+    def hide(self):
+        self.target = None
+
+        self.place_forget()
+#-------------------------------------------------------
+
+# ------------------------------- for name -----------------------
+class Keypad_alphabets(tk.Frame):
+
+    cells = [
         ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
         ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
     ]
@@ -64,19 +120,19 @@ class Keypad(tk.Frame):
                 b.grid(row=y, column=x, sticky='news')
 
         x = tk.Button(self, text='Space', command=self.space)
-        x.grid(row=4, column=0, columnspan='6', sticky='news')
+        x.grid(row=3, column=0, columnspan='6', sticky='news')
 
         x = tk.Button(self, text='tab', command=self.tab)
-        x.grid(row=4, column=6, columnspan='5', sticky='news')
+        x.grid(row=3, column=6, columnspan='5', sticky='news')
 
         x = tk.Button(self, text='Backspace', command=self.backspace)
-        x.grid(row=4, column=11,columnspan='5', sticky='news')
+        x.grid(row=3, column=11,columnspan='5', sticky='news')
 
         x = tk.Button(self, text='Clear', command=self.clear)
-        x.grid(row=4, column=16, columnspan='5',  sticky='news')
+        x.grid(row=3, column=16, columnspan='5',  sticky='news')
 
         x = tk.Button(self, text='Hide', command=self.hide)
-        x.grid(row=4, column=21, columnspan='5', sticky='news')
+        x.grid(row=3, column=21, columnspan='5', sticky='news')
 
 
     def get(self):
@@ -112,17 +168,79 @@ class Keypad(tk.Frame):
             self.clear()
             self.append(text)
 
-    def copy(self):
-        #TODO: copy to clipboad
-        if self.target:
-            self.memory = self.get()
-            self.label['text'] = 'memory: ' + self.memory
-            print(self.memory)
+    def show(self, entry):
+        self.target = entry
 
-    def paste(self):
-        #TODO: copy from clipboad
+        self.place(relx=0.5, rely=0.5, anchor='c')
+
+    def hide(self):
+        self.target = None
+
+        self.place_forget()
+#-------------------------------------------------------
+
+# ------------------------------- for emailid -----------------------
+class Keypad_emailid(tk.Frame):
+
+    cells = [
+        ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '@', '.'],
+        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+    ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.target = None
+        self.memory = ''
+
+        for y, row in enumerate(self.cells):
+            for x, item in enumerate(row):
+                b = tk.Button(self, text=item, command=lambda text=item:self.append(text))
+                b.grid(row=y, column=x, sticky='news')
+
+        x = tk.Button(self, text='Backspace', command=self.backspace)
+        x.grid(row=0, column=12,columnspan='6', sticky='news')
+
+        x = tk.Button(self, text='Clear', command=self.clear)
+        x.grid(row=0, column=18, columnspan='4',  sticky='news')
+
+        x = tk.Button(self, text='Hide', command=self.hide)
+        x.grid(row=0, column=22, columnspan='4', sticky='news')
+
+
+    def get(self):
         if self.target:
-            self.append(self.memory)
+            return self.target.get()
+
+    def append(self, text):
+        if self.target:
+            self.target.insert('end', text)
+
+    def clear(self):
+        if self.target:
+            self.target.delete(0, 'end')
+
+    def backspace(self):
+        if self.target:
+            text = self.get()
+            text = text[:-1]
+            self.clear()
+            self.append(text)
+
+    def space(self):
+        if self.target:
+            text = self.get()
+            text = text + " "
+            self.clear()
+            self.append(text)
+
+    def tab(self):
+        if self.target:
+            text = self.get()
+            text = text + "     "
+            self.clear()
+            self.append(text)
 
     def show(self, entry):
         self.target = entry
@@ -133,7 +251,6 @@ class Keypad(tk.Frame):
         self.target = None
 
         self.place_forget()
-
 #-------------------------------------------------------
 
 
@@ -277,7 +394,9 @@ HoverButton(f2, text="i", activebackground="#6382b8", cursor="hand2", command=on
             width=2, border=2).place(
     x=450, y=100)
 
-keypad = Keypad(root)
+keypad_emailid = Keypad_emailid(root)
+keypad_alphabets = Keypad_alphabets(root)
+keypad_digits1 = Keypad_digits(root)
 
 l0 = Label(f2, text='Enter your details :-', font=font1)
 l0.place(x=250, y=100)
@@ -289,7 +408,7 @@ e1.insert(0, 'Enter Your Name...')
 e1.bind('<FocusIn>', on_e1_click)
 e1.place(x=450, y=140)
 
-HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e1),width=8, border=1).place(x=780, y=135)
+HoverButton(f2, text="⌨", activebackground="#6382b8", cursor="hand2", command=lambda:keypad_alphabets.show(e1),width=3, border=1).place(x=780, y=135)
 
 l2 = Label(f2, text='Contact', font=font1)
 l2.place(x=250, y=180)
@@ -298,7 +417,7 @@ e2.insert(0, 'Enter Your Contact...')
 e2.bind('<FocusIn>', on_e2_click)
 e2.place(x=450, y=180)
 
-HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e2),width=8, border=1).place(x=780, y=175)
+HoverButton(f2, text="⌨", activebackground="#6382b8", cursor="hand2", command=lambda:keypad_digits1.show(e2),width=3, border=1).place(x=780, y=175)
 
 l3 = Label(f2, text='Email Id', font=font1)
 l3.place(x=250, y=220)
@@ -307,7 +426,7 @@ e3.insert(0, 'Enter Your Email Id...')
 e3.bind('<FocusIn>', on_e3_click)
 e3.place(x=450, y=220)
 
-HoverButton(f2, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad.show(e3), width=8, border=1).place(x=780, y=215)
+HoverButton(f2, text="⌨", activebackground="#6382b8", cursor="hand2", command=lambda:keypad_emailid.show(e3), width=3, border=1).place(x=780, y=215)
 
 
 def clear1():
@@ -395,7 +514,7 @@ c.pack()
 p3 = PhotoImage(file='back.gif')
 c.create_image(0, 0, image=p3, anchor=NW)
 
-keypad1 = Keypad(root)
+keypad_digits2 = Keypad_digits(root)
 
 l4 = Label(f3, text='Enter the required data (in INR) :-', font=font1)
 l4.place(x=250, y=100)
@@ -407,7 +526,7 @@ e5.insert(0, 'Enter Your Annual Income...')
 e5.bind('<FocusIn>', on_e5_click)
 e5.place(x=480, y=160)
 
-HoverButton(f3, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad1.show(e5),width=8, border=1).place(x=800, y=155)
+HoverButton(f3, text="⌨", activebackground="#6382b8", cursor="hand2", command=lambda:keypad_digits2.show(e5),width=3, border=1).place(x=800, y=155)
 
 l6 = Label(f3, text='Exemptions / Deductions', font=font1)
 l6.place(x=250, y=200)
@@ -416,7 +535,7 @@ e6.insert(0, 'Enter Your Exemptions / deductions...')
 e6.bind('<FocusIn>', on_e6_click)
 e6.place(x=480, y=200)
 
-HoverButton(f3, text="keypad", activebackground="#6382b8", cursor="hand2", command=lambda:keypad1.show(e6),width=8, border=1).place(x=800, y=195)
+HoverButton(f3, text="⌨", activebackground="#6382b8", cursor="hand2", command=lambda:keypad_digits2.show(e6),width=3, border=1).place(x=800, y=195)
 
 
 def oldtax(ta):
