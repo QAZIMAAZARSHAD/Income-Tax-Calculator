@@ -355,6 +355,8 @@ def on_e1_click(event):
     if firstclick1:  # if this is the first time they clicked it
         firstclick1 = False
         e1.delete(0, "end")  # delete all the text in the entry
+#myfirst change
+#comments
 
 
 firstclick2 = True
