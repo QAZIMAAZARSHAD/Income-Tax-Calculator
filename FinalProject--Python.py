@@ -748,10 +748,10 @@ def sharemail():
 
 def credit():
     messagebox.showinfo('Credits',
-                        'Name\t\t\tReg. number\tRoll no.\n\nMohit Kumar Mahato\t11913514\t09\n\n'
-                        'Rocky Sharaf\t\t11918040\t70\n\n'
-                        'Qazi Maaz Arshad\t\t11906424\t26 \n\n'
-                        'Special Thanks to Gagandeep Mam')
+                        'Qazi Maaz Arshad\n'
+                        'Rocky Sharaf\n'
+                        'Mohit Kumar Mahato\n\n'
+                        'Special Thanks to Wonderful Contributors')
 
 
 def learn_more():
