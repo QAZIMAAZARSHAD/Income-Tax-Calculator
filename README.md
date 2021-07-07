@@ -177,9 +177,9 @@ git push -u origin <your_branch_name>
 ## Open Source Programs we have been associated with: 
 
 <p align="center">
-<a href="https://lgmsoc.co/" target="_black">
+<a href="https://lgmsoc.co/" target="_blank">
 <img  height=30% src="https://i.postimg.cc/2jPGcsqW/logo.png">
-<a href="https://devincept.tech/" target="_black">
+<a href="https://devincept.codes/projects.html" target="_blank">
 <img width=30% src="https://raw.githubusercontent.com/smv1999/CompetitiveProgrammingQuestionBank/master/images/devincept.gif">
 </p>
 
