@@ -175,40 +175,13 @@ git push -u origin <your_branch_name>
 
 
 ## Open Source Programs we have been associated with: 
-<div style="display:flex">
-     <div style="flex:1;padding-right:50px;padding-left:50px">
-          <a href="https://letsgrowmore.in/soc/" target="_black"><img src="https://i.postimg.cc/2jLPNC5V/download.jpg" width= "25%" align="left"/></a>
-     </div>
-     <div style="flex:1;padding-left:10px;">
-       <table>
-        <tr>
-          <th>Level</th>
-          <th>Points</th> 
-        </tr>
-        <tr>
-          <td>Level 0</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>Level 1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Level 2</td>
-          <td>15</td>
-        </tr>
-        <tr>
-          <td>Level 3</td>
-          <td>30</td>
-        </tr>
-      <tr>
-          <td>Level 4</td>
-          <td>45</td>
-        </tr>
-      </table>  
-     </div>
-</div>
- 
+
+<p align="center">
+<a href="https://lgmsoc.co/" target="_black">
+<img  height=30% src="https://i.postimg.cc/2jPGcsqW/logo.png">
+<a href="https://devincept.tech/" target="_black">
+<img width=30% src="https://raw.githubusercontent.com/smv1999/CompetitiveProgrammingQuestionBank/master/images/devincept.gif">
+</p>
 
 ## Code of Conduct ✍️
 <p align="center">
