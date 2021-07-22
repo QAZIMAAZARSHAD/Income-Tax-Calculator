@@ -101,6 +101,27 @@ You can refer to the following articles on the basics of Git and Github and also
 - [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
 - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
+## How to run the application❓
+1.) Download latest version of python from [here](https://www.python.org/downloads/) and install it
+
+2.) Install libraries in need
+```
+pip install tkinter
+``` 
+```
+pip install re
+```
+```
+pip install fpdf
+```
+```
+pip install smtplib
+```
+```
+pip install pyglet
+```
+3.) Clone the project on local system and run FinalProject--Python.py
+
 ## Contribution Guidelines 🏗
 
 Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and improve it further
