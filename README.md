@@ -19,13 +19,13 @@
 
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
-<p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 70%></p>
+<p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 60%></p>
 
 To know how much, you need to study our income tax rules and deal with a number of lengthy calculations.
-<p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 70%>></p>
+<p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 55%>></p>
 
 Well! Take a chill pill. Don't be intimidated by those lengthy calculations because Income Tax Calculator is here for the rescue!
-<p align="center"><img src="https://media.tenor.com/images/8cb1eb67e6ed411122c572d2729b7c9e/tenor.gif" width = 70%></p>
+<p align="center"><img src="https://media.tenor.com/images/8cb1eb67e6ed411122c572d2729b7c9e/tenor.gif" width = 50%></p>
 
 ## A sneek peek into what we have here🙈 :
 
@@ -223,13 +223,13 @@ git push -u origin <your_branch_name>
 ## Code of Conduct ✍️
 <p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/CODE_OF_CONDUCT.md">
-<img width=55% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
+<img width=60% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 <h5 align="center"><b>Click to read</b></a> 
   
 ## 📝 License 
 <p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
-<img width=55% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
+<img width=60% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
 <h5 align="center"><b>MIT License</b></a></p>
  
  ## ✨ Contributors
