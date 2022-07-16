@@ -19,13 +19,13 @@
 
 
 Tax !!! What's the first thing that comes to your mind when you hear the word TAX❓ Money 💰, Right, But how much❓ This is a complicated question.
-<p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 40%></p>
+<p align="center"><img src="https://media4.giphy.com/media/ZdZimiZrt2nrVglWfD/200.gif" width = 70%></p>
 
 To know how much, you need to study our income tax rules and deal with a number of lengthy calculations.
-<p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 40%>></p>
+<p align="center"><img src="https://steemitimages.com/DQmW5fLssfdXMkD7WsjNXKqePwSCkULbhQ6w9uvenSJKtVJ/giphy-downsized-large%20(5).gif" width = 70%>></p>
 
 Well! Take a chill pill. Don't be intimidated by those lengthy calculations because Income Tax Calculator is here for the rescue!
-<p align="center"><img src="https://media.tenor.com/images/8cb1eb67e6ed411122c572d2729b7c9e/tenor.gif" width = 30%></p>
+<p align="center"><img src="https://media.tenor.com/images/8cb1eb67e6ed411122c572d2729b7c9e/tenor.gif" width = 70%></p>
 
 ## A sneek peek into what we have here🙈 :
 
@@ -78,7 +78,6 @@ Well! Take a chill pill. Don't be intimidated by those lengthy calculations beca
 An income tax calculation system for a salaried person. This is a GUI application that allows Indian citizens to calculate their liable income tax and compare between new and old tax schemes. </div>
 </div>
 <br>
-
 
 
 ## Application Walkthrough
@@ -172,7 +171,7 @@ git checkout -b <your_branch_name>
 
 **8.** Perform your desired changes to the code base.
 
-<p align="center"><img width=35% src="https://media2.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47pzi2rpig0vc8pjusra8hiai1b91zgiywvbubu9vu&rid=giphy.gif"></p>
+<p align="center"><img width=50% src="https://media2.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47pzi2rpig0vc8pjusra8hiai1b91zgiywvbubu9vu&rid=giphy.gif"></p>
 
 **9.** Track your changes:heavy_check_mark: .
 
@@ -200,11 +199,11 @@ git push -u origin <your_branch_name>
 
 **15.** Voila :exclamation: You have made a PR to the Income Tax Calculator project :boom: . Sit back patiently and relax while the project maintainers review your PR. Please understand, at times the time taken to review a PR can vary from a few hours to a few days.
 
-<p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=30%></p>
+<p align="center"><img src="https://media.tenor.com/images/b562ddcfb131e962f9dfa01bd32a30d1/tenor.gif" width=50%></p>
 
 ## Project Admin👨‍:
 <p align="center">
-<img width=20% src="https://i.postimg.cc/qBmW9QyM/profile.gif">
+<img width=50% src="https://i.postimg.cc/qBmW9QyM/profile.gif">
 </p>
 
 <a href="https://www.linkedin.com/in/qazi-maaz-arshad/">
@@ -217,20 +216,20 @@ git push -u origin <your_branch_name>
 <a href="https://lgmsoc.co/">
 <img  height=30% src="https://i.postimg.cc/2jPGcsqW/logo.png">
 <a href="https://devincept.codes/projects.html">
-<img width=30% src="https://raw.githubusercontent.com/smv1999/CompetitiveProgrammingQuestionBank/master/images/devincept.gif">
+<img width=50% src="https://raw.githubusercontent.com/smv1999/CompetitiveProgrammingQuestionBank/master/images/devincept.gif">
 <img width=30% src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg">
 </p>
 
 ## Code of Conduct ✍️
 <p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/CODE_OF_CONDUCT.md">
-<img width=35% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
+<img width=55% src="https://partyjollof.com/wp-content/uploads/2016/02/code-gif.gif"></p>
 <h5 align="center"><b>Click to read</b></a> 
   
 ## 📝 License 
 <p align="center">
 <a href="https://github.com/QAZIMAAZARSHAD/Income-Tax-Calcultor/blob/main/LICENSE">
-<img width=35% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
+<img width=55% src="https://media0.giphy.com/media/ftGcSyLDGddLYVeE4G/giphy.gif">
 <h5 align="center"><b>MIT License</b></a></p>
  
  ## ✨ Contributors
